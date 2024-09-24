@@ -1013,10 +1013,38 @@ section,
 .clients .swiper-slide img:hover {
   transform: scale(1.1);
 }
+.card-slider {
+    border-radius: 50px;
+    margin-top: 30px;
+   
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 120px 0 60px 0;
+    background-image: url(../img/b7.png);
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+}
+.about::before {
+    content: ""; /* Create an empty content */
+    position: absolute; /* Position it relative to the parent */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* White background with 60% opacity */
+    z-index: 0; /* Place it behind the content */
+}
 .about ul {
   list-style: none;
   padding: 0;
@@ -2149,4 +2177,48 @@ section,
 
 .custom-shape-divider-bottom-1727186153 .shape-fill {
     fill: #242424;
+}
+.cafe .p{
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+.cafe-name {
+  font-size: 36px;
+  font-family: 'Georgia', serif;
+  text-transform: lowercase;
+  color: white;
+}
+
+.cafe-name span {
+  font-style: italic;
+  font-weight: 500;
+  color: white;
+}
+
+.cafe-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-right: 170px;
+}
+.bean-image-right{
+    position: absolute;
+    right: 4px;
+    bottom: -244%;
+}
+.bean-image-right img{
+  width: 78%;
+}
+
+.bean-image-left{
+    position: absolute;
+    left: 4px;
+    bottom: -244%;
+}
+.bean-image-left img{
+  width: 78%;
 }
