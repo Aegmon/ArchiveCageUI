@@ -34,6 +34,20 @@
     background-color: #f1c88e;
 }
 
+
+.category-menu a {
+    padding: 10px 50px;
+    background-color: #f1c88e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.category-menu a:hover {
+    background-color: #a9734d;
+}
 /* Menu Content */
 .menu-content {
     display: flex;

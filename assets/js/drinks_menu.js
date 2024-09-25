@@ -77,6 +77,72 @@ function showCategory(category) {
 }
 
 
+function showCategoryFood(category) {
+    const menuItems = {
+        'pastry': ['Ny Style Biscoff', 'Oreo', 'NY Levain', 'Matcha'],
+        'pasta': ['Chicken Alfredo', 'Chicken Pomodoro'],
+        'rice':  ['Paella', 'Chicken Pops'],
+         'appetizers':  ['Nachos', 'French Fries', 'Parmesan Potato Chips'],
+          'burger':  ['Cheesy Burger', 'Classic Burger','Dynamite Burger','Chicken Popeyes']
+    };
+
+    // Hide both sections initially
+    document.getElementById("food").style.display = "";
+    document.getElementById("menu-items-food").style.display = "";
+
+    // Clear and populate menu items based on the category
+    let     itemsDiv = document.getElementById("menu-items-food");
+    
+
+    // Clear previous items
+    itemsDiv.innerHTML = "";
+
+    // Populate menu items
+    menuItems[category].forEach(item => {
+        let button = document.createElement("button");
+        button.innerText = item;
+        button.onclick = () => loadProduct(item);
+        itemsDiv.appendChild(button);
+    });
+
+    itemsDiv.style.display = 'flex'; // Show the items
+}
+
+function showOrder(category) {
+    const menuItems = {
+        'pending': ['#0001', '#0002', '#0003', '#0004'],
+        'complete': ['#0001', '#0002', '#0003', '#0004'],
+        'history':  ['#0001', '#0002', '#0003', '#0004'],
+    };
+
+    // Hide both sections initially
+    document.getElementById("order").style.display = "";
+    document.getElementById("menu-items-order").style.display = "";
+
+    // Clear and populate menu items based on the category
+    let itemsDiv = document.getElementById("menu-items-order");
+    
+    // Clear previous items
+    itemsDiv.innerHTML = "";
+
+    // Create and append the h2 element for the order number
+    let orderNumberHeading = document.createElement("h2");
+    orderNumberHeading.innerText = "Order Number"; // Set the text for the h2
+    orderNumberHeading.style.color = "white";       // Set text color to white
+    orderNumberHeading.style.textAlign = "center";   // Center the text
+    itemsDiv.appendChild(orderNumberHeading); // Append the h2 to the itemsDiv
+
+    // Populate menu items
+    menuItems[category].forEach(item => {
+        let button = document.createElement("button");
+        button.innerText = item;
+        button.onclick = () => loadProduct(item);
+        itemsDiv.appendChild(button);
+    });
+
+    itemsDiv.style.display = 'flex'; // Show the items
+}
+
 
 // Load product details
 function loadProduct(productName) {
