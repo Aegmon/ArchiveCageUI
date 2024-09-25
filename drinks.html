@@ -46,11 +46,12 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li class="nav-item cafe-center" style="margin-right: 400px;">
-                        <h1 class="cafe-name">archive <span>cafe</span></h1>
+                    <li class="nav-item cafe-center">
+                        <h1 class="cafe-name"><strong>archive</strong> <span>cafe</span></h1>
                     </li>
-                    <li><a href="#cafe">Cafe</a></li>
+                    <li><a href="index.html">Cafe</a></li>
                     <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html">Meet the Team</a></li>
                     <!-- Dropdown changed to button -->
                     <li class="dropdown">
                         <button class="btn-icon-only" id="dropdownMenuButton" aria-expanded="false">
@@ -77,9 +78,10 @@
     <main class="main">
 
 
-        <div class="menu-container">
-            <nav class="category-menu d-flex justify-content-around flex-wrap mb-3">
-                <a class="custom-category-btn" href="menu.html">Back</a>
+        <div class="menu-container ">
+            <nav class="category-menu d-flex justify-content-around align-items-center flex-wrap mb-3">
+                <div class="category-box">Drinks</div>
+                <a class=" custom-category-btn" href="menu.html">Back</a>
                 <button class="custom-category-btn" onclick="showCategory('coffee')">Coffee</button>
                 <button class="custom-category-btn" onclick="showCategory('non-coffee')">Non-Coffee</button>
                 <button class="custom-category-btn" onclick="showCategory('refreshers')">Refreshers</button>
@@ -96,13 +98,7 @@
                 <div class="col-lg-9 col-md-8 col-sm-12 product-details">
                     <h2 id="product-name" class="text-center mb-4"></h2>
                     <div class="customization-options">
-                        <!-- Size -->
-                        <div class="size-options mb-3">
-                            <h3>Size</h3>
-                            <button class="custom-btn" id="size-regular" onclick="setSize('regular')">Regular
-                                16oz</button>
-                            <button class="custom-btn" id="size-large" onclick="setSize('large')">Large 22oz</button>
-                        </div>
+
 
                         <!-- Type and Quantity in 1 Row -->
                         <div class="row mb-3">
@@ -119,7 +115,18 @@
                             </div>
                         </div>
 
-                        <!-- Espresso Shots and Extras in 1 Row -->
+                        <div class="row mb-3 justify-content-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <h3>Extras</h3>
+                                <button class="custom-btn" onclick="setMilk('regular')">Regular Milk</button>
+                                <button class="custom-btn" onclick="setMilk('oat')">Oat Milk</button>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <h3> </h3>
+                                <button class="custom-btn" onclick="setMilk('regular')">Dine In</button>
+                                <button class="custom-btn" onclick="setMilk('oat')">Take Out</button>
+                            </div>
+                        </div>
                         <div class="row mb-3">
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <h3>Espresso Shots</h3>
@@ -127,11 +134,7 @@
                                 <span id="shots-count" class="mx-3">0</span>
                                 <button class="custom-btn" onclick="adjustShots(1)">+</button>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <h3>Extras</h3>
-                                <button class="custom-btn" onclick="setMilk('regular')">Regular Milk</button>
-                                <button class="custom-btn" onclick="setMilk('oat')">Oat Milk</button>
-                            </div>
+
                         </div>
 
                         <!-- Syrups and Quantity in 1 Row -->
@@ -147,14 +150,23 @@
                                     <!-- Add more syrup buttons here -->
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="row mb-3">
                             <div class="col-lg-6 col-md-6 col-sm-12">
-                                <h3>Quantity</h3>
-                                <button class="custom-btn" onclick="adjustQuantity(-1)">-</button>
-                                <span id="quantity-count" class="mx-3">0</span>
-                                <button class="custom-btn" onclick="adjustQuantity(1)">+</button>
+                                <h3>Sauce</h3>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button class="custom-btn" onclick="selectSyrup('roasted-almonds')">White
+                                        Choco</button>
+                                    <button class="custom-btn" onclick="selectSyrup('vanilla')">Chocolate</button>
+                                    <button class="custom-btn" onclick="selectSyrup('hazelnut')">Salted Caramel</button>
+                                    <button class="custom-btn" onclick="selectSyrup('strawberry')">Caramel</button>
+                                    <button class="custom-btn" onclick="selectSyrup('strawberry')">Butterscotch</button>
+                                    <button class="custom-btn" onclick="selectSyrup('strawberry')">Dulce</button>
+                                    <button class="custom-btn" onclick="selectSyrup('strawberry')">Con Leche</button>
+                                </div>
                             </div>
                         </div>
-
                         <!-- Total Price -->
                         <div class="total-price mb-3 text-end">
                             <h3>Total: Php <span id="total-price">000.00</span></h3>

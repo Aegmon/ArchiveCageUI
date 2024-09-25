@@ -166,3 +166,17 @@ function selectSyrup(syrup) {
 function placeOrder() {
     alert("Order placed successfully!");
 }
+
+// Select all buttons inside .category-menu
+const buttons = document.querySelectorAll('.category-menu button');
+
+// Add click event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove the 'clicked' class from all buttons (optional if you want only one button to stay clicked)
+        buttons.forEach(btn => btn.classList.remove('clicked'));
+        
+        // Add the 'clicked' class to the clicked button
+        this.classList.add('clicked');
+    });
+});

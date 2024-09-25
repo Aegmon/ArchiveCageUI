@@ -148,9 +148,14 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  padding: 4px 0;
   transition: all 0.5s;
   z-index: 997;
+    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+
 }
 
 .header .logo {
@@ -254,10 +259,48 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
+.navmenu {
+  display: flex;
+  justify-content: flex-end; /* Aligns nav items to the right */
+  align-items: center;
+  width: auto; /* Auto width to contain its children only */
+}
+
+.navmenu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.navmenu .cafe-center {
+  position: absolute; /* Position it absolutely within the nav */
+  left: 50%; /* Center based on total header width */
+  transform: translateX(-50%); /* Perfectly center it */
+  margin: 0; /* Remove margin for precise positioning */
+}
+
+
+.navmenu .dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.navmenu .dropdown button {
+  margin-left: 15px;
+}
+
+
+/* For responsiveness */
+
+
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between elements */
+    align-items: center; /* Vertically aligns elements */
   }
 
   .navmenu ul {
@@ -304,6 +347,17 @@ h6 {
     color: var(--nav-hover-color);
   }
 
+  /* .cafe-center styling */
+  .navmenu .cafe-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-right: 0; /* Remove margin to center properly */
+  }
+
+  /* Dropdown */
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
@@ -408,6 +462,7 @@ h6 {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
 }
+
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
@@ -894,7 +949,11 @@ section,
   width: 100%; 
   height: auto; 
 }
+.hero-menu {
+  width: 100%;
+  min-height: 94vh;
 
+}
 .hero h1 {
   margin: 0;
   font-size: 80px;
@@ -2199,6 +2258,7 @@ section,
   font-family: 'Georgia', serif;
   text-transform: lowercase;
   color: white;
+  font-weight: 900;
 }
 
 .cafe-name span {
@@ -2207,15 +2267,8 @@ section,
   color: white;
 }
 
-.cafe-center {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    margin-right: 170px;
-}
+
+
 .bean-image-right{
     position: absolute;
     right: 4px;
