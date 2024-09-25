@@ -187,6 +187,11 @@ h6 {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
+.header-menu .btn-getstarted:hover,
+.header-menu .btn-getstarted:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--heading-color), transparent 15%);
+}
 
 @media (max-width: 1200px) {
   .header .logo {
@@ -233,13 +238,19 @@ h6 {
     --heading-color: #242424;
     --nav-color: white;
 }
-
+.index-page .header-menu {
+     --background-color: var(--accent-color);
+    --heading-color: var(--accent-color);
+    --nav-color: white;
+}
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
   --background-color: rgba(36, 36, 36, .95);
 }
-
+.index-page.scrolled .header-menu {
+  --background-color:var(--accent-color);
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -2221,4 +2232,14 @@ section,
 }
 .bean-image-left img{
   width: 78%;
+}
+
+.menu-bg {
+
+    background-image: url('../img/background\ management.JPG'); 
+  background-size: cover; 
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 100%; 
+  height: auto; 
 }

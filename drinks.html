@@ -28,6 +28,7 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/drinks_menu.css" rel="stylesheet">
     <link href="assets/css/menu_landing.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -75,25 +76,88 @@
     <main class="main">
 
 
-        <section id="hero" class="hero menu-bg">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <h1 class="menu-title mb-4">MENU</h1>
-                    </div>
+        <div class=" menu-container">
+            <nav class="category-menu d-flex justify-content-around flex-wrap mb-3">
+                <button class="custom-category-btn" onclick="showCategory('coffee')">Coffee</button>
+                <button class="custom-category-btn" onclick="showCategory('non-coffee')">Non-Coffee</button>
+                <button class="custom-category-btn" onclick="showCategory('refreshers')">Refreshers</button>
+                <button class="custom-category-btn" onclick="showCategory('tea')">Tea</button>
+            </nav>
+
+            <div class="row menu-content">
+                <!-- Product Buttons inside the box -->
+                <div id="menu-items" class="col-lg-3 col-md-4 col-sm-12 menu-items">
+                    <!-- Coffee Product Buttons -->
                 </div>
-                <div class="row justify-content-center">
-                    <div class="menu-options">
-                        <a href="drinks.html" class="menu-option drinks">
-                            <span>DRINKS</span>
-                        </a>
-                        <a href="food_menu.html" class="menu-option foods">
-                            <span>FOODS</span>
-                        </a>
+
+                <!-- Product Selection and Customization -->
+                <div class="col-lg-9 col-md-8 col-sm-12 product-details">
+                    <h2 id="product-name" class="text-center mb-4">Caramel Macchiato</h2>
+                    <div class="customization-options">
+                        <!-- Size -->
+                        <div class="size-options mb-3">
+                            <h3>Size</h3>
+                            <button class="custom-btn" id="size-regular" onclick="setSize('regular')">Regular
+                                16oz</button>
+                            <button class="custom-btn" id="size-large" onclick="setSize('large')">Large 22oz</button>
+                        </div>
+
+                        <!-- Hot or Cold -->
+                        <div class="type-options mb-3">
+                            <h3>Type</h3>
+                            <button class="custom-btn" onclick="setTemperature('hot')">Hot</button>
+                            <button class="custom-btn" onclick="setTemperature('cold')">Cold</button>
+                        </div>
+
+                        <!-- Espresso Shots -->
+                        <div class="espresso-shots mb-3">
+                            <h3>Espresso Shots</h3>
+                            <button class="custom-btn" onclick="adjustShots(-1)">-</button>
+                            <span id="shots-count" class="mx-3">0</span>
+                            <button class="custom-btn" onclick="adjustShots(1)">+</button>
+                        </div>
+
+                        <!-- Extras -->
+                        <div class="extras mb-3">
+                            <h3>Extras</h3>
+                            <button class="custom-btn" onclick="setMilk('regular')">Regular Milk</button>
+                            <button class="custom-btn" onclick="setMilk('oat')">Oat Milk</button>
+                        </div>
+
+                        <!-- Syrups -->
+                        <div class="syrups mb-3">
+                            <h3>Syrup</h3>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="custom-btn" onclick="selectSyrup('roasted-almonds')">Roasted
+                                    Almonds</button>
+                                <button class="custom-btn" onclick="selectSyrup('vanilla')">Vanilla</button>
+                                <button class="custom-btn" onclick="selectSyrup('hazelnut')">Hazelnut</button>
+                                <button class="custom-btn" onclick="selectSyrup('strawberry')">Strawberry</button>
+                                <!-- Add more syrup buttons here -->
+                            </div>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div class="quantity mb-3">
+                            <h3>Quantity</h3>
+                            <button class="custom-btn" onclick="adjustQuantity(-1)">-</button>
+                            <span id="quantity-count" class="mx-3">0</span>
+                            <button class="custom-btn" onclick="adjustQuantity(1)">+</button>
+                        </div>
+
+                        <!-- Total Price -->
+                        <div class="total-price mb-3 text-end">
+                            <h3>Total: Php <span id="total-price">000.00</span></h3>
+                        </div>
+
+                        <!-- Place Order -->
+                        <button class="custom-btn place-order w-100" onclick="placeOrder()">Place Order</button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+
 
 
 
@@ -129,7 +193,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/drinks_menu.js"></script>
 </body>
 
 </html>

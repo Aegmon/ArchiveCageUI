@@ -1,0 +1,167 @@
+
+.menu-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #ffffff;
+ 
+}
+
+
+
+  .menu-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    /* Button Styles */
+    .menu-option {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        text-decoration: none;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        z-index: 1;
+        margin: 10px;
+        box-sizing: border-box;
+        background-color: #d2a374; /* Button background color */
+        border-radius: 15px; /* Slightly rounded corners */
+    }
+
+    .menu-option:hover {
+        transform: scale(1.05);
+        background-color: #b3895d; /* Darker shade for hover effect */
+    }
+
+    .menu-option span {
+        z-index: 2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+.footer-menu {
+    background-color: #b3895d;
+    height: 50px;
+    padding: 10px;
+    margin: auto;
+}
+
+
+.footer-menu h1 {
+  color: white;
+  font-size: 25px;
+
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+        overflow-y: auto; /* Scroll vertically */
+    }
+
+    .menu-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-option {
+        width: 250px;
+        height: 250px;
+        font-size: 2rem;
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+    }
+
+    .menu-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* For tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-options {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .menu-option {
+        width: 250px;
+        height: 250px;
+    }
+
+    .menu-title {
+        font-size: 2.5rem;
+    }
+
+    .header-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* For small laptops */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .menu-options {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .menu-option {
+        width: 250px;
+        height: 250px;
+    }
+
+    .menu-title {
+        font-size: 2.5rem;
+    }
+
+    .header-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* For large laptops and desktops */
+@media (min-width: 1367px) {
+    .menu-options {
+        justify-content: center;
+    }
+
+    .menu-option {
+        width: 250px;
+        height: 250px;
+    }
+
+    .menu-title {
+        font-size: 3rem;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
