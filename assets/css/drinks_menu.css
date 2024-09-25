@@ -38,7 +38,8 @@
 .menu-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 38px;
+    width: 100%;
 }
 
 .menu-items {
@@ -69,14 +70,15 @@
 
 /* Product Customization */
 .product-details {
-    background-color: #1f0d01b6;
+background-color: #1f0d01b6;
     padding: 20px;
     border-radius: 10px;
     flex-grow: 1;
     color: white;
-    width: 100%;
-    max-width: 600px;
+    /* width: 100%; */
+    max-width: 100%;
 }
+
 
 .product-details h2 {
     text-align: center;

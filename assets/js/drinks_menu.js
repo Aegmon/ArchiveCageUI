@@ -41,24 +41,42 @@ function calculateTotal() {
 // Show menu categories
 function showCategory(category) {
     const menuItems = {
-        coffee: ['Americano', 'Cafe Late', 'Mocha', 'White Chocolate', 'Salted Caramel', 'Caramel Macchiato', 'Butter Scotch', 'Cafe Con Leche', 'Dirty Green Matcha'],
-        'non-coffee': ['Strawberry Late', 'Chocolate Late', 'Matcha Late', 'Chocolate Strawberry Late', 'Matcha Chocolate', 'Sea Salt Matcha'],
-        refreshers: ['Green Apple', 'Lychee', 'Kiwi', 'Passion Fruit', 'Pink Blossom'],
+        'coffee': ['Americano', 'Cafe Latte', 'Mocha', 'White Chocolate', 'Salted Caramel', 'Caramel Macchiato', 'Butter Scotch', 'Cafe Con Leche', 'Dirty Green Matcha'],
+        'non-coffee': ['Strawberry Latte', 'Chocolate Latte', 'Matcha Latte', 'Chocolate Strawberry Latte', 'Matcha Chocolate', 'Sea Salt Matcha'],
+        'refreshers': ['Green Apple', 'Lychee', 'Kiwi', 'Passion Fruit', 'Pink Blossom'],
         tea: ['Blue Citron', 'Blue Honey', 'Black Tea']
     };
 
+    // Hide both sections initially
+    document.getElementById("coffee").style.display = "none";
+    document.getElementById("refreshers").style.display = "none";
+
+    // Show the appropriate section based on the category
+    if (category === 'coffee' || category === 'non-coffee') {
+        document.getElementById("coffee").style.display = "";
+    } else if (category === 'refreshers' || category === 'tea') {
+        document.getElementById("refreshers").style.display = "";
+    }
+
+    // Clear and populate menu items
     let itemsDiv = document.getElementById("menu-items");
-    itemsDiv.innerHTML = ""; // Clear previous items
+    itemsDiv.innerHTML = "";
 
-    menuItems[category].forEach(item => {
-        let button = document.createElement("button");
-        button.innerText = item;
-        button.onclick = () => loadProduct(item);
-        itemsDiv.appendChild(button);
-    });
+    // Check if the selected category has items to show
+    if (menuItems[category]) {
+        menuItems[category].forEach(item => {
+            let button = document.createElement("button");
+            button.classList.add("custom-btn");
+            button.innerText = item;
+            button.onclick = () => loadProduct(item);
+            itemsDiv.appendChild(button);
+        });
+    }
 
-    itemsDiv.style.display = 'flex'; // Show the items
+    // Set itemsDiv display style to flex
+    itemsDiv.style.display = 'flex';
 }
+
 
 // Load product details
 function loadProduct(productName) {
