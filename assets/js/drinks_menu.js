@@ -44,38 +44,38 @@ function showCategory(category) {
         'coffee': ['Americano', 'Cafe Latte', 'Mocha', 'White Chocolate', 'Salted Caramel', 'Caramel Macchiato', 'Butter Scotch', 'Cafe Con Leche', 'Dirty Green Matcha'],
         'non-coffee': ['Strawberry Latte', 'Chocolate Latte', 'Matcha Latte', 'Chocolate Strawberry Latte', 'Matcha Chocolate', 'Sea Salt Matcha'],
         'refreshers': ['Green Apple', 'Lychee', 'Kiwi', 'Passion Fruit', 'Pink Blossom'],
-        tea: ['Blue Citron', 'Blue Honey', 'Black Tea']
+        'tea': ['Blue Citron', 'Blue Honey', 'Black Tea']
     };
 
     // Hide both sections initially
-    document.getElementById("coffee").style.display = "none";
-    document.getElementById("refreshers").style.display = "none";
+    document.getElementById("coffee-non").style.display = "none";
+    document.getElementById("refreshers-non").style.display = "none";
 
-    // Show the appropriate section based on the category
+    // Clear and populate menu items based on the category
+    let itemsDiv;
+    
     if (category === 'coffee' || category === 'non-coffee') {
-        document.getElementById("coffee").style.display = "";
+        document.getElementById("coffee-non").style.display = "";
+        itemsDiv = document.getElementById("menu-items-coffee");
     } else if (category === 'refreshers' || category === 'tea') {
-        document.getElementById("refreshers").style.display = "";
+        document.getElementById("refreshers-non").style.display = "";
+        itemsDiv = document.getElementById("menu-items-refreshers");
     }
 
-    // Clear and populate menu items
-    let itemsDiv = document.getElementById("menu-items");
+    // Clear previous items
     itemsDiv.innerHTML = "";
 
-    // Check if the selected category has items to show
-    if (menuItems[category]) {
-        menuItems[category].forEach(item => {
-            let button = document.createElement("button");
-            button.classList.add("custom-btn");
-            button.innerText = item;
-            button.onclick = () => loadProduct(item);
-            itemsDiv.appendChild(button);
-        });
-    }
+    // Populate menu items
+    menuItems[category].forEach(item => {
+        let button = document.createElement("button");
+        button.innerText = item;
+        button.onclick = () => loadProduct(item);
+        itemsDiv.appendChild(button);
+    });
 
-    // Set itemsDiv display style to flex
-    itemsDiv.style.display = 'flex';
+    itemsDiv.style.display = 'flex'; // Show the items
 }
+
 
 
 // Load product details
