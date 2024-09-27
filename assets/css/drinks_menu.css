@@ -11,6 +11,15 @@
   width: 100%; 
   height: auto; 
 }
+
+.menu-container-light{
+background-color: white !important;
+ width: 100%;
+ min-height: 94vh;
+  padding: 120px;
+  width: 100%; 
+  height: auto; 
+}
 /* Styling specifically for divs inside .category-menu */
 .category-box {   
     text-align: center;
@@ -47,16 +56,36 @@
 }
 /* Styling specifically for links inside .category-menu */
 .category-menu a {
-    padding: 10px 50px;
+    padding: auto;
     background-color: #f1c88e;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.4em;
     height: 60px;
 }
+.category-menu-products button {
+     padding: 10px 30px;
+    background-color: #ededed;
+    color: #737373;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: .9em;
+    height: 45px;
+}
 
+
+/* Hover effect specifically for buttons */
+.category-menu-products button:hover {
+    background-color: #ed8705;
+}
+.category-menu-products button.clicked {
+    background-color: #ed8705;
+}
+
+.ca
 /* Hover effect for .category-menu container (won't override specific elements) */
 
 
@@ -211,3 +240,27 @@ background-color: #1f0d01b6;
     }
 }
 
+.product-img{
+    height: auto;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.btn-order {
+    background-color: #ed8705;
+    border: none;
+    border-radius: 50px;
+    width: 100px;
+}
+
+.btn-order:hover {
+    background-color: black !important;
+}
+
+.yellow-border{
+    border-top: 2px solid #ed8705;
+  width: 100%;
+ margin-bottom: 10px;
+}

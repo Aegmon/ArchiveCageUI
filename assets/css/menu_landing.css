@@ -60,6 +60,18 @@
     padding: 10px;
     margin: auto;
 }
+.footer-product {
+    background-color: #242424;
+    height: 100%;
+    padding: 10px;
+  
+    margin: auto;
+}
+.footer-product h1 {
+  color: white;
+  font-size: 25px;
+
+}
 
 
 .footer-menu h1 {
