@@ -1019,18 +1019,70 @@ section,
 }
 
 .cold-latte {
-  position: relative;
-  z-index: 2; /* Brings cold latte to the front */
+    position: relative;
+    z-index: 2;
+    width: 82%;
+    max-width: 500px; /* Limit max size for larger screens */
+    height: auto;
 }
 
 .hot-latte {
-  position: absolute;
-  top: 20px; /* Adjust position */
-  left: 20px; /* Adjust position */
-  z-index: 1; /* Sends hot latte to the back */
-  transform: rotate(-80deg); /* Rotates the hot latte by 80 degrees */
+    position: absolute;
+    top: 61px;
+    left: -148px;
+    z-index: 1;
+    width: 71%;
+    transform: rotate(341deg);
 }
 
+.splash {
+    position: absolute;
+    top: -143px;
+    left: -181px;
+    z-index: -1;
+    width: 127%;
+    max-width: 200%;
+}
+
+@media (max-width: 768px) {
+    .cold-latte {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .hot-latte {
+        top: 50px;
+        left: -100px;
+        width: 75%;
+        transform: rotate(340deg);
+    }
+
+    .splash {
+        top: -100px;
+        left: -150px;
+        width: 140%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cold-latte {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .hot-latte {
+        top: 40px;
+        left: -80px;
+        width: 80%;
+        transform: rotate(340deg);
+    }
+
+    .splash {
+        top: -80px;
+        left: -120px;
+        width: 150%;
+    }
+}
 
 @media (max-width: 640px) {
   .hero h1 {
@@ -2215,20 +2267,7 @@ section,
   position: relative;
 }
 
-.cold-latte {
-  position: relative;
-  z-index: 2; /* Brings cold latte to the front */
-}
 
-.hot-latte {
-    position: absolute;
-    top: -78px;
-    left: 37px;
-    z-index: 1;
-    height: auto;
-    width: 352px;
-    transform: rotate(321deg);
-}
 .custom-shape-divider-bottom-1727186153 {
     position: absolute;
     bottom: 0;
