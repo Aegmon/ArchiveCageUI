@@ -380,7 +380,12 @@ input[type="radio"] {
     color: white;
     font-weight: 700;
 }
-
+@media (max-width: 1560px) {
+    .extra-container {
+        width: auto; /* Set width to auto on smaller screens */
+        padding: 8px 5px; /* Adjust padding if needed */
+    }
+}
 .radio-options {
     display: flex;
     flex-direction: column; /* Stack labels vertically */
