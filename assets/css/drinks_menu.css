@@ -17,6 +17,14 @@ background-color: white !important;
  width: 100%;
  min-height: 94vh;
   padding: 120px;
+
+  height: auto; 
+}
+.menu-container-light-details{
+background-color: white !important;
+ width: 100%;
+ min-height: 94vh;
+  padding: 95px;
   width: 100%; 
   height: auto; 
 }
@@ -263,4 +271,151 @@ background-color: #1f0d01b6;
     border-top: 2px solid #ed8705;
   width: 100%;
  margin-bottom: 10px;
+}
+
+.product-divider{
+    border-right: 2px solid black !important;
+    height: 600px;
+    margin: auto;
+    width: .1px;
+}
+.btn-group-wrapper {
+    display: flex;
+    justify-content: flex-end;    
+    width: 100%;                 
+}
+
+.btn-group {
+    display: flex;                
+  width: 50%;              
+}
+
+.btn-group button {
+    flex: 1;                     
+    margin-right: 5px;        
+    padding: 10px;              
+    font-size: 16px;              
+    border-radius: 5px;          
+}
+
+.btn-group button:last-child {
+    margin-right: 0;            
+}
+
+
+
+.product-description {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: black;
+    text-align: right;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* For screens smaller than 1200px */
+@media (max-width: 1199px) {
+    .product-description {
+        font-size: 1.2rem;
+        text-align: right;
+    }
+}
+
+/* For screens smaller than 992px (tablets) */
+@media (max-width: 991px) {
+    .product-description {
+        font-size: 1.1rem;
+        text-align: center;  /* Centering the text on smaller screens */
+    }
+}
+
+/* For screens smaller than 768px (mobile) */
+@media (max-width: 767px) {
+    .product-description {
+        font-size: 1rem;
+        text-align: center;  /* Centered alignment for easier reading */
+        padding: 0 10px;     /* Add some padding for mobile devices */
+    }
+}
+
+/* For screens smaller than 576px (small mobile) */
+@media (max-width: 575px) {
+    .product-description {
+        font-size: 0.9rem;
+        text-align: left;    /* Align to the left for very small screens */
+        padding: 0 15px;
+    }
+}
+
+.extras-section {
+    font-size: 16px;
+}
+
+.radio-options label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.btn-warning {
+    background-color: #ed8705;
+    color: white;
+}
+
+.btn-dark {
+    background-color: #4e3628;
+    color: white;
+}
+.extra-container{
+        background-color: #4e3628;
+    text-align: center;
+    width: 26%;
+    height: 40px;
+    padding: 8px 3px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column; /* Stack labels vertically */
+    margin: 20px 0; /* Optional: Add some margin */
+}
+
+.radio-options input[type="radio"] {
+    display: none; /* Hide the default radio button */
+}
+
+.radio-options label {
+    position: relative;
+    padding-left: 30px; /* Space for custom radio */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Adjust font size as needed */
+    color: black; /* Change to your desired color */
+}
+
+/* Custom radio button */
+.radio-options label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Size of the outer circle */
+    height: 20px;
+    border: 2px solid black; /* Outer circle border */
+    border-radius: 50%; /* Circle shape */
+    background: white; /* Background of the outer circle */
+    transition: background 0.2s, border 0.2s; /* Smooth transition */
+}
+
+/* Change background and border when radio is checked */
+.radio-options input[type="radio"]:checked + div:before {
+    background: orange; /* Inner circle color when checked */
+    border: 2px solid orange; /* Change border color when checked */
 }
