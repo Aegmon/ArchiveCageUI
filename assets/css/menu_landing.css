@@ -54,6 +54,37 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
+    .menu-system {
+         position: relative;
+    width: 300px;
+    height: 81px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: #d2a374;
+    border-radius: 50px;
+    }
+
+    .menu-system:hover {
+        transform: scale(1.05);
+        background-color: #b3895d; /* Darker shade for hover effect */
+    }
+
+    .menu-system span {
+        z-index: 2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
 .footer-menu {
     background-color: #b3895d;
     height: 100%;

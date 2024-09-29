@@ -37,7 +37,7 @@
 
 <body class="index-page">
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
+    <header id="header" class="header header-menu d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
             <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -75,88 +75,98 @@
             </nav>
         </div>
     </header>
-
-
     <main class="main">
 
 
-        <div class="menu-container-light">
-            <nav class="category-menu-products d-flex flex-wrap justify-content-center mb-3">
-                <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('signature')">Signature
-                    Coffee</button>
-                <button class="custom-category-btn btn mx-2 my-1"
-                    onclick="showProduct('non-coffee')">Non-Coffee</button>
-                <button class="custom-category-btn btn mx-2 my-1"
-                    onclick="showProduct('regreshers')">Refreshers</button>
-                <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('tea')">Tea</button>
-                <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('pastry')">Pastiers</button>
-                <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('pasta')">Pasta</button>
-                <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('rice')">Rice Meal</button>
-                <button class="custom-category-btn btn mx-2 my-1"
-                    onclick="showProduct('appetizers')">Appetizers</button>
-                <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('burger')">Burger</button>
-            </nav>
+        <div class="menu-container ">
+
+
+            <div class="row menu-content " style="max-width: 80%;margin: auto;">
 
 
 
-            <div id="food" class="row">
+                <div class="col-lg-12 col-md-8 col-sm-12 product-details">
+                    <h2 id="product-name" class="text-center mb-4"></h2>
+                    <div class="customization-options">
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <div class="card text-center">
-                                <img class="card-img-top product-img" src="assets/img/products/cold americano.png"
-                                    alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">₱ {{price}} </h5>
-                                    <p class="card-text">{{title}}</p>
-                                    <div class="yellow-border"></div>
-                                    <a href="#" class="btn btn-primary btn-order">Order</a>
+
+                        <div class="row mb-3">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <!-- Product Name -->
+                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                    <label class="me-2 w-25 w-md-100">Product Name</label>
+                                    <input type="text" class="form-control w-100 custom-input"
+                                        placeholder="Enter Product Name" />
+                                </div>
+
+                                <!-- Category Dropdown -->
+                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                    <label class="me-2 w-25 w-md-100">Category</label>
+                                    <select class="form-control w-100 custom-input">
+                                        <option>Select Category</option>
+                                        <option>Food</option>
+                                        <option>Drinks</option>
+                                    </select>
+                                </div>
+
+                                <!-- Type Dropdown -->
+                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                    <label class="me-2 w-25 w-md-100">Type</label>
+                                    <select class="form-control w-100 custom-input">
+                                        <option>Select Type</option>
+                                        <option>Coffee</option>
+                                        <option>Non-Coffee</option>
+                                        <option>Refreshers</option>
+                                    </select>
+                                </div>
+
+                                <!-- Sugar Dropdown -->
+                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                    <label class="me-2 w-25 w-md-100">Sugar</label>
+                                    <select class="form-control w-100 custom-input">
+                                        <option>Select Sugar Level</option>
+                                        <option>Sweet</option>
+                                        <option>Regular</option>
+                                        <option>Mild</option>
+                                    </select>
+                                </div>
+
+                                <!-- Espresso Dropdown -->
+                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                    <label class="me-2 w-25 w-md-100">Espresso</label>
+                                    <select class="form-control w-100 custom-input">
+                                        <option>Select Espresso Level</option>
+                                        <option>Strong</option>
+                                        <option>Regular</option>
+                                        <option>Mild</option>
+                                    </select>
+                                </div>
+
+
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group" style="flex-grow: 1;">
+                                    <h2 class="mb-2">Product Description</h2>
+                                    <textarea class="form-control custom-input"></textarea>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <div class="card text-center">
-                                <img class="card-img-top product-img" src="assets/img/products/cold americano.png"
-                                    alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">₱ 150 </h5>
-                                    <p class="card-text">Cafe Con Leche</p>
-                                    <div class="yellow-border"></div>
-                                    <a href="#" class="btn btn-primary btn-order">Order</a>
-                                </div>
-                            </div>
+                        <div class="row " style="max-width: 50%;">
+                            <div class="col-lg-6 col-md-6 col-sm-12"><button
+                                    class="custom-btn place-order w-100">Cancel</button></div>
+                            <div class="col-lg-6 col-md-6 col-sm-12"><button
+                                    class="custom-btn place-order w-100">Save</button></div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <div class="card text-center">
-                                <img class="card-img-top product-img" src="assets/img/products/cold americano.png"
-                                    alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">₱ 150 </h5>
-                                    <p class="card-text">Cafe Con Leche</p>
-                                    <div class="yellow-border"></div>
-                                    <a href="#" class="btn btn-primary btn-order">Order</a>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <div class="card text-center">
-                                <img class="card-img-top product-img" src="assets/img/products/cold americano.png"
-                                    alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">₱ 150 </h5>
-                                    <p class="card-text">Cafe Con Leche</p>
-                                    <div class="yellow-border"></div>
-                                    <a href="#" class="btn btn-primary btn-order">Order</a>
-                                </div>
-                            </div>
-                        </div>
+
+
+
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -169,7 +179,9 @@
 
 
     </main>
-    <footer id="footer" class="footer-product text-center">
+
+
+    <footer id="footer" class="footer-menu text-center">
 
         <h1>"brewing timeless moments"</h1>
 
