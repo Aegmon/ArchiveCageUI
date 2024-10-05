@@ -586,3 +586,184 @@ font-size: 1.8rem;
     margin-top:30px;
     font-size: 2.8rem
 }
+
+/* Each section styling */
+.cup-count-section, .meals-section {
+  background-color: #1f0d01b6;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 35%;
+}
+
+.cup-count-section button:hover{
+  background-color: #d9a26e;
+}
+
+.meals-section button:hover{
+  background-color: #d9a26e;
+}
+.sales-section{
+  background-color: #1f0d01b6;
+
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.sales-section h1{
+    color:white
+}
+
+/* Div that organizes buttons and labels */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.item button {
+  background-color: #a9734d;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 20px;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.item span {
+  margin-left: 10px;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Make buttons and labels vertical */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.total-sales span{
+  background-color: #a9734d;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+  flex-grow: 1;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.total-sales p{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.total-quantity span{
+  background-color: #a9734d;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+  flex-grow: 1;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.total-quantity p{
+  font-size: 25px;
+  font-weight: bold;
+}
+/* Hot/Cold buttons */
+.hot-cold-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hot-cold-buttons button {
+  background-color: #d5a87a;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 24px;
+  margin: 0 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.order-history{
+    background-color: #3f2314;
+    border-radius: 50px;
+    height: 70px;
+    text-align: center;
+    padding: 15px 20px;
+}
+.order-history h3{
+    color: white;
+    font-weight: 700;
+}
+
+
+.order-container{
+      background-color: #3f2314;
+    border-radius: 50px;
+    max-height: 500%;
+    text-align: center;
+    padding: 15px 20px;
+}
+.order-container p{
+    color: white;
+    font-size: 1.8rem;
+
+}
+.order-container h2{
+    color: #ed8705;
+    font-size: 3rem;
+      margin-bottom: 100px;
+
+}
+.order-container h3{
+    color: #ed8705;
+    font-size: 1.8rem;
+    font-style: italic;
+    
+      margin-bottom: 100px;
+  
+
+}
+.order-container a{
+    color: #ed8705;
+    font-size: 1.8rem;
+ 
+    border-bottom: solid 2px #ed8705;
+      margin-bottom: 100px;
+}
+.text-right {
+    text-align: right;
+    padding-right: 6%;
+}
+.product-table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
