@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Aver&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Aver&display=swap"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
@@ -28,31 +28,15 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/drinks_menu.css" rel="stylesheet">
     <link href="assets/css/menu_landing.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Additional CSS for animation */
-        .container-mop {
-            position: relative;
-            transition: order 0.5s ease, transform 0.5s ease;
-            cursor: pointer;
-        }
 
-        .row.swap .col-md-6:first-child {
-            order: 2;
-        }
-
-        .row.swap .col-md-6:last-child {
-            order: 1;
-        }
-    </style>
 </head>
 
 <body class="index-page">
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
+    <header id="header" class="header header-menu d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
             <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -64,12 +48,8 @@
                     <li class="nav-item cafe-center">
                         <h1 class="cafe-name"><strong>archive</strong> <span>cafe</span></h1>
                     </li>
-                    <li><a href="#cafe">Cafe</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="index.html">Meet the Team</a></li>
-                    <li class="nav-item d-none d-md-block">
-                        <span class="navbar-divider"></span>
-                    </li>
+
+                    <!-- Dropdown changed to button -->
                     <li class="dropdown">
                         <button class="btn-icon-only" id="dropdownMenuButton" aria-expanded="false">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -95,39 +75,52 @@
     <main class="main">
 
 
-        <div class="menu-container-light-details" style="padding-top: 150px;">
-            <div class="row justify-content-center mb-5">
-                <!-- First row for the two container-payment divs -->
-                <div class="col-3">
-                    <div class="container-payment">
-                        #00001
+        <section id="coffee" class="hero hero-menu menu-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row justify-content-center">
+                            <div class="menu-options">
+                                <a href="drinks.html" class="menu-option drinks">
+                                    <span>Menu</span>
+                                </a>
+                                <a href="food.html" class="menu-option foods">
+                                    <span>Update</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="menu-options">
+                                <a href="drinks.html" class="menu-option drinks">
+                                    <span>Sales</span>
+                                </a>
+                                <a href="food.html" class="menu-option foods">
+                                    <span>Orders</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="container-payment">
-                        Payment
+                    <div class="col-6 text-center">
+                        <img src="assets/img/products/cold americano.png" class="img-fluid cold-latte" alt="Cold Latte">
                     </div>
                 </div>
 
             </div>
-            <div class="row text-center" id="payment-row">
-                <div class="col-md-6">
-                    <div class="container-mop" id="online">
-                        <h3>Online Payment</h3>
-                        <p>Gcash Payment</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="container-mop" id="otc">
-                        <h3>Over the Counter</h3>
-                        <p>Payment over the cashier</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
+
+
+
+
+
+
+
     </main>
-    <footer id="footer" class="footer-product text-center">
+    <footer id="footer" class="footer-menu text-center">
+
         <h1>"brewing timeless moments"</h1>
+
+
+
     </footer>
 
     <!-- Scroll Top -->
@@ -149,22 +142,6 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-
-    <!-- Custom JS for swapping animation -->
-    <script>
-        document.getElementById('online').addEventListener('click', function () {
-            toggleSwap();
-        });
-
-        document.getElementById('otc').addEventListener('click', function () {
-            toggleSwap();
-        });
-
-        function toggleSwap() {
-            const row = document.getElementById('payment-row');
-            row.classList.toggle('swap');
-        }
-    </script>
 
 </body>
 
