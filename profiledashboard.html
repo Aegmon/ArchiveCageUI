@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Aver&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Aver&display=swap"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
@@ -32,7 +32,9 @@
     <link href="assets/css/menu_landing.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
 
+    </style>
 </head>
 
 <body class="index-page">
@@ -80,39 +82,59 @@
     <main class="main">
 
 
-        <div class="menu-container-light-details" style="padding-top: 150px;">
-            <div class="row justify-content-center mb-5">
-                <!-- First row for the two container-payment divs -->
-                <div class="col-3">
-                    <div class="container-payment">
-                        #00001
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="container-payment">
-                        Payment
-                    </div>
-                </div>
+        <div class="menu-container-light-details " style="padding-top: 150px;">
+            <div class="text-hero mb-5">
+                <h1 class="text-hero header-hero" style="color : #ed8705"> Profile Dashboard</h1>
 
             </div>
-            <div class="row text-center" id="payment-row">
-                <div class="col-md-6">
-                    <div class="container-mop" id="online" onclick="swapPositionsAndRedirect('online.html')">
-                        <h3>Online Payment</h3>
-                        <p>Gcash Payment</p>
+
+            <div class="row" style="display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;">
+
+                <div class="col-5 text-center">
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn-dashboard">Order History</button>
+                            <button class="btn-dashboard">Preferences</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn-dashboard">Privacy</button>
+                            <button class="btn-dashboard">Terms and Conditions</button>
+                        </div>
                     </div>
+
                 </div>
-                <div class="col-md-6">
-                    <div class="container-mop" id="otc" onclick="swapPositionsAndRedirect('otc.html')">
-                        <h3>Over the Counter</h3>
-                        <p>Payment over the cashier</p>
-                    </div>
+                <div class="col-2 text-center">
                 </div>
+                <div class="col-5 text-center">
+                    <img class="text-center mb-3" src="assets/img/logo/logo.png" alt="" height="270" width="270">
+                    <br>
+                    <img class="text-center mb-3" src="assets/img/logoarchive.png" alt="" height="100" width="auto">
+                    <h2 class="text-hero sub-hero mb-3">Already a member?<a href="#"
+                            style="color:white"><strong>Login</strong></a>
+                    </h2>
+
+                </div>
+
+
+
+
             </div>
+
         </div>
+
+
+
+
     </main>
     <footer id="footer" class="footer-product text-center">
+
         <h1>"brewing timeless moments"</h1>
+
     </footer>
 
     <!-- Scroll Top -->
@@ -134,29 +156,29 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-
-    <!-- Custom JS for swapping animation -->
     <script>
-        function swapPositionsAndRedirect(url) {
-            const onlinePayment = document.getElementById('online');
-            const overCounter = document.getElementById('otc');
+        document.querySelectorAll('.radio-options input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function () {
 
-            // Perform the swapping animation
-            if (onlinePayment.classList.contains('swap-right')) {
-                onlinePayment.classList.remove('swap-right');
-                overCounter.classList.remove('swap-left');
-            } else {
-                onlinePayment.classList.add('swap-right');
-                overCounter.classList.add('swap-left');
-            }
+                document.querySelectorAll('.radio-options input[type="radio"]').forEach(input => {
+                    const beforeStyle = input.parentNode.parentNode.querySelector('label:before');
+                    if (beforeStyle) {
+                        beforeStyle.style.background = 'white';
+                        beforeStyle.style.border = '2px solid black';
+                    }
+                });
 
-            // Redirect after a short delay to allow animation to play
-            setTimeout(function () {
-                window.location.href = url;
-            }, 1000); // Adjust delay (in milliseconds) as needed
-        }
+
+                const checkedLabel = this.closest('label');
+                const checkedBefore = checkedLabel.querySelector('div:before');
+                if (checkedBefore) {
+                    checkedBefore.style.background = 'orange';
+                    checkedBefore.style.border = '2px solid orange';
+                }
+            });
+        });
+
     </script>
-
 </body>
 
 </html>
