@@ -907,14 +907,35 @@ font-weight: 700;
 .swap-left {
     transform: translateX(-820px); 
 }
-.btn-dashboard{
-        width: 100%;
+.btn-dashboard {
+    width: 100%;
     background-color: #3f2314;
     border-radius: 50px;
     border: solid 1px #3f2314;
     padding: 10px 20px;
-    margin:20px;
+    margin: 20px;
     color: #ed8705;
     font-weight: 600;
     font-size: 1.5em;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+/* Retain color changes after button is clicked */
+.btn-dashboard.clicked {
+    background-color: #ed8705;
+    color: white;
+    border: solid 1px #ed8705;
+}
+
+.profile-view{
+     width: 100%;
+    background-color: #3f2314;
+    border-radius: 50px;
+    border: solid 1px #3f2314;
+    padding: 10px 20px;
+    margin: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
