@@ -86,298 +86,547 @@
                 <button class="custom-category-btn" onclick="showOrder('history')">Order History</button>
             </nav>
 
-            <div id="order" class="row menu-content" style="display:none">
-                <div id="menu-items-order" class="col-lg-3 col-md-4 col-sm-12 menu-items" style="display:none">
+            <div id="order" class="row menu-content">
+                <div id="menu-items-order" class="col-lg-3 col-md-4 col-sm-12 menu-items">
+                    <h2 class="text-center" style="color: white;font-weight: 700;">Order Number</h2>
+                    <h2 class="text-center" style="color: white;font-weight: 500;">#0001</h2>
+                    <h2 class="text-center" style="color: white;font-weight: 500;">#0002</h2>
+                    <h2 class="text-center" style="color: white;font-weight: 500;">#0003</h2>
+                    <h2 class="text-center" style="color: white;font-weight: 500;">#0004</h2>
+                    <h2 class="text-center" style="color: white;font-weight: 500;">#0005</h2>
+
 
                 </div>
 
                 <!-- Product Selection and Customization -->
+                <div class="row">
+                    <div class="container" data-aos="zoom-in">
+                        <div class="swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": 3,
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    },
+                    "breakpoints": {
+                      "320": {
+                        "slidesPerView": 1, 
+                        "spaceBetween": 20
+                      },
+                      "480": {
+                        "slidesPerView": 2, 
+                        "spaceBetween": 40
+                      },
+                      "768": {
+                        "slidesPerView": 3, 
+                        "spaceBetween": 60
+                      },
+                      "992": {
+                        "slidesPerView": 3, 
+                        "spaceBetween": 80
+                      },
+                      "1200": {
+                        "slidesPerView": 3, 
+                        "spaceBetween": 100
+                      }
+                    }
+                  }
+                </script>
+
+                            <div class="swiper-wrapper align-items-center">
 
 
-                <div class="col-lg-3 col-md-8 col-sm-12 product-details">
-                    <h2 id="product-name" class="text-center mb-4"></h2>
-                    <div class="customization-options">
+                                <div class="col-lg-3 col-md-8 col-sm-12 product-details swiper-slide">
+                                    <h2 id="product-name" class="text-center mb-4"></h2>
+                                    <div class="customization-options">
 
-                        <!-- Quantity Only -->
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                                <h3>#0001</h3>
+                                        <!-- Quantity Only -->
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                                                <h3>#0001</h3>
+
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dine-in</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>QTY</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Price</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="text-center">
+                                            <button class="custom-btn place-order w-50">Complete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-8 col-sm-12 product-details swiper-slide">
+                                    <h2 id="product-name" class="text-center mb-4"></h2>
+                                    <div class="customization-options">
+
+                                        <!-- Quantity Only -->
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                                                <h3>#0001</h3>
+
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dine-in</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>QTY</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Price</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="text-center">
+                                            <button class="custom-btn place-order w-50">Complete</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-lg-3 col-md-8 col-sm-12 product-details swiper-slide">
+                                    <h2 id="product-name" class="text-center mb-4"></h2>
+                                    <div class="customization-options">
+
+                                        <!-- Quantity Only -->
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                                                <h3>#0001</h3>
+
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dine-in</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>QTY</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Price</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="text-center">
+                                            <button class="custom-btn place-order w-50">Complete</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-8 col-sm-12 product-details swiper-slide">
+                                    <h2 id="product-name" class="text-center mb-4"></h2>
+                                    <div class="customization-options">
+
+                                        <!-- Quantity Only -->
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                                                <h3>#0001</h3>
+
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dine-in</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>QTY</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Price</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="text-center">
+                                            <button class="custom-btn place-order w-50">Complete</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-8 col-sm-12 product-details swiper-slide">
+                                    <h2 id="product-name" class="text-center mb-4"></h2>
+                                    <div class="customization-options">
+
+                                        <!-- Quantity Only -->
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                                                <h3>#0001</h3>
+
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dine-in</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>QTY</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Price</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 justify-content-center">
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>Dulce De Leche</h3>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                                                <h3>2</h3>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+
+                                                <h3>135.00</h3>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="text-center">
+                                            <button class="custom-btn place-order w-50">Complete</button>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dine-in</h3>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>QTY</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Price</h3>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-
-
-                        <div class="text-center">
-                            <button class="custom-btn place-order w-50">Complete</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-8 col-sm-12 product-details">
-                    <h2 id="product-name" class="text-center mb-4"></h2>
-                    <div class="customization-options">
-
-                        <!-- Quantity Only -->
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                                <h3>#0001</h3>
-
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dine-in</h3>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
 
 
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>QTY</h3>
 
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Price</h3>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Caramel Machiato</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Sea Salt Matcha</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dynamite Burger</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-
-
-                        <div class="text-center">
-                            <button class="custom-btn place-order w-50">Complete</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-8 col-sm-12 product-details">
-                    <h2 id="product-name" class="text-center mb-4"></h2>
-                    <div class="customization-options">
-
-                        <!-- Quantity Only -->
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                                <h3>#0002</h3>
-
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dine-in</h3>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>QTY</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Price</h3>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>Dulce De Leche</h3>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                                <h3>2</h3>
-
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-
-                                <h3>135.00</h3>
-                            </div>
-                        </div>
-
-
-                        <div class="text-center">
-                            <button class="custom-btn place-order w-50">Complete</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
