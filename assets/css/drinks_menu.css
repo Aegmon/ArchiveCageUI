@@ -156,13 +156,13 @@ background-color: white !important;
 
 /* Product Customization */
 .product-details {
-background-color: #1f0d01b6;
+    background-color: #1f0d01b6;
     padding: 20px;
     border-radius: 10px;
     flex-grow: 1;
     color: white;
     /* width: 100%; */
-    max-width: 100%;
+    max-width: 75%;
 }
 
 
@@ -218,6 +218,14 @@ background-color: #1f0d01b6;
     border-radius: 5px;
     font-size: 1.2em;
 }
+   .menu-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: stretch;
+   }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {

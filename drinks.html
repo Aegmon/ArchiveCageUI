@@ -97,6 +97,7 @@
                 <!-- Product Selection and Customization -->
                 <div class="col-lg-9 col-md-8 col-sm-12 product-details">
                     <h2 id="product-name" class="text-center mb-4"></h2>
+                    <p id="product-description-coffee" class="text-center mb-4"></p>
                     <div class="customization-options">
 
 
@@ -147,10 +148,10 @@
                                     <button class="custom-btn" onclick="selectSyrup('vanilla')">Vanilla</button>
                                     <button class="custom-btn" onclick="selectSyrup('hazelnut')">Hazelnut</button>
                                     <button class="custom-btn" onclick="selectSyrup('strawberry')">Strawberry</button>
-                                    <!-- Add more syrup buttons here -->
+                                    <button class="custom-btn" onclick="selectSyrup('strawberry')">Fructose</button>
+
                                 </div>
                             </div>
-
                         </div>
                         <div class="row mb-3">
                             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -184,38 +185,75 @@
                     <!-- Coffee Product Buttons -->
                 </div>
 
-                <!-- Product Selection and Customization -->
+
                 <div class="col-lg-9 col-md-8 col-sm-12 product-details">
-                    <h2 id="product-name" class="text-center mb-4"></h2>
+                    <h2 id="product-name-refreshers" class="text-center mb-4"></h2>
+                    <p id="product-description-refreshers" class="text-center mb-4"></p>
                     <div class="customization-options">
 
                         <!-- Quantity Only -->
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                                <h3>Quantity</h3>
-                                <button class="custom-btn" onclick="adjustQuantity(-1)">-</button>
-                                <span id="quantity-count" class="mx-3">0</span>
-                                <button class="custom-btn" onclick="adjustQuantity(1)">+</button>
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-4">
+                                <div class="row mb-3" id="syrup-section" style="display: none;">
+
+                                    <h3>Syrup</h3>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <button class="custom-btn" onclick="selectSyrup('roasted-almonds')">Roasted
+                                            Almonds</button>
+                                        <button class="custom-btn" onclick="selectSyrup('vanilla')">Vanilla</button>
+                                        <button class="custom-btn" onclick="selectSyrup('hazelnut')">Hazelnut</button>
+                                        <button class="custom-btn"
+                                            onclick="selectSyrup('strawberry')">Strawberry</button>
+                                        <button class="custom-btn" onclick="selectSyrup('strawberry')">Fructose</button>
+
+                                    </div>
+
+                                </div>
+                                <div class="row mb-3" id="extras-section" style="display: none;">
+
+                                    <h3>Extras</h3>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <button class="custom-btn" onclick="selectSyrup('roasted-almonds')">Hot</button>
+                                        <button class="custom-btn" onclick="selectSyrup('vanilla')">Cold</button>
+
+
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
+                            <div class="col-6">
+                                <div class="row mb-3 justify-content-center">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                                        <h3>Quantity</h3>
+                                        <button class="custom-btn" onclick="adjustQuantity(-1)">-</button>
+                                        <span id="quantity-count" class="mx-3">0</span>
+                                        <button class="custom-btn" onclick="adjustQuantity(1)">+</button>
+                                    </div>
+                                </div>
 
-                        <!-- Dine In and Take Out Buttons -->
-                        <div class="row mb-3 justify-content-center">
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                                <button class="custom-btn w-50" onclick="setOrderType('dine-in')">Dine In</button>
-                                <button class="custom-btn w-50 mt-2" onclick="setOrderType('take-out')">Take
-                                    Out</button>
+                                <!-- Dine In and Take Out Buttons -->
+                                <div class="row mb-3 justify-content-center">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                                        <button class="custom-btn w-50" onclick="setOrderType('dine-in')">Dine
+                                            In</button>
+                                        <button class="custom-btn w-50 mt-2" onclick="setOrderType('take-out')">Take
+                                            Out</button>
+                                    </div>
+                                </div>
+
+                                <!-- Total Price -->
+                                <div class="total-price mb-3 text-center">
+                                    <h3>Total: Php <span id="total-price">000.00</span></h3>
+                                </div>
+
+                                <!-- Place Order -->
+                                <div class="text-center">
+                                    <button class="custom-btn place-order w-50" onclick="placeOrder()">Place
+                                        Order</button>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Total Price -->
-                        <div class="total-price mb-3 text-center">
-                            <h3>Total: Php <span id="total-price">000.00</span></h3>
-                        </div>
-
-                        <!-- Place Order -->
-                        <div class="text-center">
-                            <button class="custom-btn place-order w-50" onclick="placeOrder()">Place Order</button>
                         </div>
                     </div>
                 </div>

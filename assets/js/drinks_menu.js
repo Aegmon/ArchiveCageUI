@@ -68,6 +68,7 @@ function showCategory(category) {
     // Populate menu items
     menuItems[category].forEach(item => {
         let button = document.createElement("button");
+        button.classList.add('custom-btn');  // Assuming custom button styling class exists
         button.innerText = item;
         button.onclick = () => loadProduct(item);
         itemsDiv.appendChild(button);
@@ -75,6 +76,7 @@ function showCategory(category) {
 
     itemsDiv.style.display = 'flex'; // Show the items
 }
+
 
 
 function showCategoryFood(category) {
@@ -108,47 +110,95 @@ function showCategoryFood(category) {
     itemsDiv.style.display = 'flex'; // Show the items
 }
 
-function showOrder(category) {
+function showCategory(category) {
     const menuItems = {
-        'pending': ['#0001', '#0002', '#0003', '#0004'],
-        'complete': ['#0001', '#0002', '#0003', '#0004'],
-        'history':  ['#0001', '#0002', '#0003', '#0004'],
+        'coffee': ['Americano', 'Cafe Latte', 'Mocha', 'White Chocolate', 'Salted Caramel', 'Caramel Macchiato', 'Butter Scotch', 'Cafe Con Leche', 'Dirty Green Matcha','Dulce De Leche','Sea Salt Latte'],
+        'non-coffee': ['Strawberry Latte', 'Chocolate Latte', 'Matcha Latte', 'Chocolate Strawberry Latte', 'Matcha Chocolate', 'Sea Salt Matcha'],
+        'refreshers': ['Green Apple', 'Lychee', 'Kiwi', 'Passion Fruit', 'Pink Blossom'],
+        'tea': ['Blue Citron', 'Blue Honey', 'Black Tea']
     };
 
-    // Hide both sections initially
-    document.getElementById("order").style.display = "";
-    document.getElementById("menu-items-order").style.display = "";
+    document.getElementById("coffee-non").style.display = "none";
+    document.getElementById("refreshers-non").style.display = "none";
 
-    // Clear and populate menu items based on the category
-    let itemsDiv = document.getElementById("menu-items-order");
+    let itemsDiv;
     
-    // Clear previous items
+    if (category === 'coffee' || category === 'non-coffee') {
+        document.getElementById("coffee-non").style.display = "";
+        itemsDiv = document.getElementById("menu-items-coffee");
+    } else if (category === 'refreshers' || category === 'tea') {
+        document.getElementById("refreshers-non").style.display = "";
+        itemsDiv = document.getElementById("menu-items-refreshers");
+    }
+
     itemsDiv.innerHTML = "";
 
-    // Create and append the h2 element for the order number
-    let orderNumberHeading = document.createElement("h2");
-    orderNumberHeading.innerText = "Order Number"; // Set the text for the h2
-    orderNumberHeading.style.color = "white";       // Set text color to white
-    orderNumberHeading.style.textAlign = "center";   // Center the text
-    itemsDiv.appendChild(orderNumberHeading); // Append the h2 to the itemsDiv
-
-    // Populate menu items
     menuItems[category].forEach(item => {
         let button = document.createElement("button");
         button.innerText = item;
-        button.onclick = () => loadProduct(item);
+        button.onclick = () => loadProduct(item, category);
         itemsDiv.appendChild(button);
     });
 
-    itemsDiv.style.display = 'flex'; // Show the items
+    itemsDiv.style.display = 'flex';
+}
+
+const productDescriptions = {
+    'Americano': 'A simple, refreshing alternative to regular coffee for espresso lovers.',
+    'Café Latte': 'A coffee beverage made by mixing espresso with milk. Known for its smooth and creamy taste.',
+    'Cafe Mocha': 'Rich espresso, smooth chocolate syrup, and creamy milk for a refreshing treat.',
+    'White Chocolate': 'Combines velvety white chocolate syrup with milk for a creamy drink.',
+    'Caramel Macchiato': 'Bold espresso layered over creamy milk with rich caramel drizzle.',
+    'Salted Caramel': 'Smooth caramel with a hint of saltiness, paired with rich espresso and creamy milk.',
+    'Butterscotch': 'Buttery sweetness of butterscotch with smooth espresso and creamy milk.',
+    'Cafe Con Leche': 'Bold espresso and creamy milk for a balance of rich, creamy flavor.',
+    'Dulce De Leche': 'Homemade “Yema” mixed with creamy milk, perfect for a sweet tooth.',
+    'Sea Salt Latte': 'Creamy foam with a blend of smooth espresso and creamy milk, elevated with sea salt.',
+    'Dirty Green Matcha': 'Vibrant green matcha with a rich shot of espresso, blended with creamy milk.',
+    'matcha latte': 'Vibrant matcha with creamy milk, sweetened for the sweet tooth.',
+    'Strawberry Latte': 'Creamy milk and sweet strawberry syrup blend for a vibrant drink.',
+    'Chocolate Latte': 'A creamy, smooth decadent chocolate drink.',
+    'Chocolate Strawberry Latte': 'Creamy milk with strawberry syrup and rich chocolate for a fruity-chocolatey treat.',
+    'Sea Salt Matcha': 'A salty drink with sweetness and creaminess from the sea salt foam.',
+    'Green Apple': 'Crisp and tangy flavor of green apples in a fizzy, carbonated drink.',
+    'Lychee': 'A sweet fizzy drink capturing the exotic sweetness of ripe lychees.',
+    'Passion Fruit': 'A sparkling, fizzy drink with the vibrant tangy essence of passion fruit.',
+    'Kiwi': 'Bittersweet fizzy drink with the bright and tangy flavor of ripe kiwi.',
+    'Pink Blossom': 'Combines sakura petals, lychee syrup, and a creamy touch of yogurt for a sparkling blend.',
+    'Blue Citron': 'A refreshing blend of honey citron ginger tea and vibrant blue tea.',
+    'Blue Honey': 'Calming blue tea combined with the natural sweetness of honey.',
+    'Black Tea': 'Rich black tea infused with fragrant notes of lychee syrup.'
+};
+function loadProduct(productName, category) {
+    // Set product name correctly for both refreshers and others
+    if (category === 'refreshers') {
+        document.getElementById("product-name-refreshers").innerText = productName; // Correct ID for refreshers
+        document.getElementById("product-description-refreshers").innerText = productDescriptions[productName] || ''; // Set description for refreshers
+    } else {
+        document.getElementById("product-name").innerText = productName; // Use general ID for others
+        document.getElementById("product-description-coffee").innerText = productDescriptions[productName] || ''; // Set description for coffee/non-coffee
+    }
+
+    // Show Syrup section for Refreshers
+    if (category === 'refreshers') {
+        document.getElementById("extras-section").style.display = "none";
+        document.getElementById("syrup-section").style.display = "";
+    } 
+    // Show Extras section for Tea
+    else if (category === 'tea') {
+        document.getElementById("syrup-section").style.display = "none";
+        document.getElementById("extras-section").style.display = "";
+    } 
+    // Show both for Coffee and Non-Coffee
+    else {
+        document.getElementById("syrup-section").style.display = "";
+        document.getElementById("extras-section").style.display = "";
+    }
 }
 
 
-// Load product details
-function loadProduct(productName) {
-    document.getElementById("product-name").innerText = productName;
-    // You can add more logic here to load specific product details
-}
+
+
 
 // Milk selection
 function setMilk(type) {
