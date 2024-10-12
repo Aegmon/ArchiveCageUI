@@ -83,9 +83,31 @@
 
             <div class="row menu-content " style="max-width: 80%;margin: auto;">
 
+                <div class="col-2">
+                    <div class="menu-options">
+                        <a href="addproduct.html" style="       position: relative;
+    width: 300px;
+    height: 81px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: #3f2314;
+    border-radius: 50px;">
+                            <span>Add Products</span>
+                        </a>
+                    </div>
+                </div>
 
-
-                <div class="col-lg-12 col-md-8 col-sm-12 product-details">
+                <div class="col-lg-10 col-md-8 col-sm-10 product-details">
                     <h2 id="product-name" class="text-center mb-4"></h2>
                     <div class="customization-options">
 
@@ -102,26 +124,26 @@
                                 <!-- Category Dropdown -->
                                 <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
                                     <label class="me-2 w-25 w-md-100">Category</label>
-                                    <select class="form-control w-100 custom-input">
-                                        <option>Select Category</option>
-                                        <option>Food</option>
-                                        <option>Drinks</option>
+                                    <select class="form-control w-100 custom-input" id="category"
+                                        onchange="updateProductType()">
+                                        <option value="">Select Category</option>
+                                        <option value="Drinks">Drinks</option>
+                                        <option value="Food">Food</option>
                                     </select>
                                 </div>
+
 
                                 <!-- Type Dropdown -->
                                 <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
                                     <label class="me-2 w-25 w-md-100">Type</label>
-                                    <select class="form-control w-100 custom-input">
-                                        <option>Select Type</option>
-                                        <option>Coffee</option>
-                                        <option>Non-Coffee</option>
-                                        <option>Refreshers</option>
+                                    <select class="form-control w-100 custom-input" id="type">
+                                        <option value="">Select Type</option>
                                     </select>
                                 </div>
 
                                 <!-- Sugar Dropdown -->
-                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column"
+                                    id="sugar-dropdown" style="display:none !important;">
                                     <label class="me-2 w-25 w-md-100">Sugar</label>
                                     <select class="form-control w-100 custom-input">
                                         <option>Select Sugar Level</option>
@@ -132,7 +154,8 @@
                                 </div>
 
                                 <!-- Espresso Dropdown -->
-                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column"
+                                    id="espresso-dropdown" style="display:none !important;">
                                     <label class="me-2 w-25 w-md-100">Espresso</label>
                                     <select class="form-control w-100 custom-input">
                                         <option>Select Espresso Level</option>
@@ -143,10 +166,24 @@
                                 </div>
 
 
+
                             </div>
 
                             <!-- Product Description -->
                             <div class="col-lg-6 col-md-6 col-sm-12">
+                                <!-- Upload Photo -->
+                                <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                    <label class="me-2 w-25 w-md-100">Upload Photo</label>
+                                    <input type="file" class="form-control w-100 custom-input" id="product-photo"
+                                        accept="image/*" onchange="previewPhoto()">
+                                </div>
+
+                                <!-- Photo Preview -->
+                                <div class="form-group">
+                                    <img id="photo-preview" src="#" alt="Preview Image"
+                                        style="display:none; max-width: 100%; height: auto;" />
+                                </div>
+
                                 <div class="form-group" style="flex-grow: 1;">
                                     <h2 class="mb-2">Product Description</h2>
                                     <textarea class="form-control custom-input"></textarea>
@@ -208,6 +245,100 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+        function previewPhoto() {
+            const file = document.getElementById('product-photo').files[0];
+            const preview = document.getElementById('photo-preview');
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block'; // Show the image once it's loaded
+            };
+
+            if (file) {
+                reader.readAsDataURL(file); // Read the file as a Data URL
+            }
+        }
+
+        function updateProductType() {
+            var category = document.getElementById("category").value;
+            var typeDropdown = document.getElementById("type");
+            var sugarDropdown = document.getElementById("sugar-dropdown");
+            var espressoDropdown = document.getElementById("espresso-dropdown");
+
+            // Clear the current options in the "Type" dropdown
+            typeDropdown.innerHTML = '<option value="">Select Type</option>';
+
+            // Define the options for each category
+            var drinksTypes = ['Coffee', 'Non-Coffee', 'Refreshers', 'Tea'];
+            var foodTypes = ['Pastries', 'Pasta', 'Rice Meal', 'Appetizer', 'Burger'];
+
+            console.log("Selected category: ", category); // Log the selected category
+
+            if (category === 'Drinks') {
+                console.log("Drinks selected. Showing Sugar dropdown."); // Log for Drinks selection
+
+                // Show the Sugar dropdown when Drinks is selected
+                if (sugarDropdown) {
+                    sugarDropdown.style.display = 'block';
+                    console.log("Sugar dropdown displayed."); // Log for Sugar dropdown display
+                }
+
+                // Populate the Type dropdown with drink types
+                drinksTypes.forEach(function (type) {
+                    var option = document.createElement("option");
+                    option.value = type;
+                    option.text = type;
+                    typeDropdown.add(option);
+                });
+
+                // Show Espresso dropdown if Coffee is selected in Type
+                typeDropdown.onchange = function () {
+                    var selectedType = typeDropdown.value;
+
+                    // Show or hide the Espresso dropdown based on the selected type
+                    if (selectedType === 'Coffee') {
+                        if (espressoDropdown) {
+                            espressoDropdown.style.display = 'block';
+                            console.log("Espresso dropdown displayed."); // Log for Espresso dropdown display
+                        }
+                    } else {
+                        if (espressoDropdown) {
+                            espressoDropdown.style.display = 'none';
+                            console.log("Espresso dropdown hidden."); // Log for Espresso dropdown hide
+                        }
+                    }
+                };
+
+            } else if (category === 'Food') {
+                console.log("Food selected. Hiding Sugar dropdown."); // Log for Food selection
+
+                // Hide the Sugar dropdown when Food is selected
+                if (sugarDropdown) {
+                    sugarDropdown.style.display = 'none';
+                    console.log("Sugar dropdown hidden."); // Log for Sugar dropdown hide
+                }
+
+                // Hide the Espresso dropdown as well
+                if (espressoDropdown) {
+                    espressoDropdown.style.display = 'none';
+                    console.log("Espresso dropdown hidden."); // Log for Espresso dropdown hide
+                }
+
+                // Populate the Type dropdown with food types
+                foodTypes.forEach(function (type) {
+                    var option = document.createElement("option");
+                    option.value = type;
+                    option.text = type;
+                    typeDropdown.add(option);
+                });
+            }
+        }
+
+    </script>
+
+
 
 </body>
 
