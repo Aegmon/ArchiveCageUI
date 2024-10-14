@@ -65,8 +65,7 @@ background-color: white !important;
     height: 200px;
 }
 
-
-/* Styling specifically for buttons inside .category-menu */
+/* Styling for the buttons inside .category-menu */
 .category-menu button {
     padding: 10px 50px;
     background-color: #a9734d;
@@ -75,36 +74,48 @@ background-color: white !important;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2em;
-        height: 60px;
+    height: 60px;
+    margin: 5px; /* Add some margin for spacing between buttons */
+    flex: 1; /* Ensure buttons scale */
 }
 
-/* Hover effect specifically for buttons */
+/* Hover effect for buttons */
 .category-menu button:hover {
     background-color: #f1c88e;
 }
+
+/* Active/clicked state for buttons */
 .category-menu button.clicked {
     background-color: #f1c88e;
 }
-/* Styling specifically for links inside .category-menu */
+
+/* Styling for links inside .category-menu */
 .category-menu a {
-   padding: 15px 50px;
+    padding: 15px 50px;
     background-color: #f1c88e;
-      color: white;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2em;
-        height: 60px;
+    height: 60px;
+    margin: 5px; /* Add some margin for spacing */
+    display: inline-block;
+    text-align: center; /* Ensure centered text in links */
+    flex: 1; /* Ensure links scale similarly to buttons */
 }
+
+/* Styling for product buttons inside .category-menu-products */
 .category-menu-products button {
-     padding: 10px 30px;
+    padding: 10px 30px;
     background-color: #ededed;
     color: #737373;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-size: .9em;
+    font-size: 0.9em;
     height: 45px;
+    margin: 5px; /* Add spacing */
 }
 
 
@@ -969,4 +980,219 @@ font-weight: 700;
     color: white;
     width: 50%;
     font-weight: 700;
+}
+/* Additional responsive improvements */
+
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+    .menu-container, .login-container {
+        padding: 60px;
+        background-size: cover;
+    }
+
+    .category-box {
+        font-size: 1.8em;
+        padding-top: 50px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .menu-items {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .product-details {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .product-description {
+        font-size: 1.1rem;
+    }
+    
+    .category-menu button, .category-menu a {
+        padding: 10px 30px;
+        font-size: 1em;
+    }
+
+    .place-order {
+        font-size: 1em;
+    }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .menu-container, .login-container {
+        padding: 40px;
+        margin-top: 40px;
+    
+    }
+
+    .category-box {
+        font-size: 1.5em;
+        padding-top: 40px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .category-menu button, .category-menu a {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .customization-options h3 {
+        font-size: 18px;
+    }
+
+    .place-order {
+        font-size: 0.9em;
+    }
+
+    .product-details h2 {
+        font-size: 25px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .menu-container, .login-container {
+        padding: 20px;
+    }
+
+    .category-box {
+        font-size: 1.2em;
+        padding-top: 30px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu-items, .product-details {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .product-description {
+        font-size: 0.9rem;
+    }
+
+    .category-menu button, .category-menu a {
+        padding: 5px 15px;
+        font-size: 0.8em;
+    }
+
+    .customization-options h3 {
+        font-size: 16px;
+    }
+
+    .place-order {
+        font-size: 0.8em;
+    }
+
+    .product-details h2 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px) {
+     .category-menu {
+        flex-direction: column;
+        align-items: stretch; /* Make buttons full width */
+        padding: 0 10px;
+    }
+
+      .category-menu button, .category-menu a {
+        width: 100%;
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+    .menu-items, .product-details {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-items {
+        margin-bottom: 20px;
+    }
+
+    .product-details {
+        padding: 0 15px;
+    }
+
+    .custom-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .customization-options .row {
+        flex-direction: column;
+    }
+
+    .customization-options .col-lg-6, 
+    .customization-options .col-md-6, 
+    .customization-options .col-sm-12 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #quantity-count, #shots-count {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .total-price {
+        text-align: center;
+    }
+}
+@media (max-width: 1024px) {
+    .category-menu {
+        flex-direction: column;
+        align-items: stretch; /* Make buttons full width */
+        padding: 0 10px;
+    }
+
+    .category-menu button, .category-menu a {
+        width: 100%;
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+
+    .menu-items, .product-details {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-items {
+        margin-bottom: 20px;
+    }
+
+    .product-details {
+        padding: 0 15px;
+    }
+
+    .custom-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .customization-options .row {
+        flex-direction: column;
+    }
+
+    .customization-options .col-lg-6, 
+    .customization-options .col-md-6, 
+    .customization-options .col-sm-12 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #quantity-count, #shots-count {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .total-price {
+        text-align: center;
+    }
 }
