@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Aver&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
@@ -30,10 +30,59 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/drinks_menu.css" rel="stylesheet">
     <link href="assets/css/menu_landing.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        /* General responsive styles */
+        @media (max-width: 768px) {
+            .container-payment {
+                font-size: 0.8em;
+                /* Smaller font for mobile */
+                padding: 10px;
+                text-align: center;
+                /* Center the text */
+            }
 
+            h3 {
+                font-size: 1.5rem;
+                /* Smaller heading on mobile */
+            }
+
+            .menu-container-light-details {
+                padding: 20px;
+                /* Adjust padding */
+            }
+
+            /* Adjust the padding and margins for smaller devices */
+            .row {
+                margin: 0;
+                /* Remove margins for rows */
+            }
+
+            /* Center align text in smaller devices */
+            .text-center {
+                text-align: center;
+            }
+        }
+
+        /* Adjustments for tablet */
+        @media (max-width: 1024px) {
+            .container-payment {
+                font-size: 0.9em;
+                /* Slightly larger font for tablets */
+            }
+
+            h3 {
+                font-size: 2rem;
+                /* Adjust heading size for tablets */
+            }
+
+            .menu-container-light-details {
+                padding: 40px;
+                /* Adjust padding for tablet view */
+            }
+        }
     </style>
 </head>
 
@@ -41,11 +90,9 @@
 
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
             <a href="index.html" class="logo d-flex align-items-center me-auto">
                 <img src="assets/img/logo/logo.png" alt="">
             </a>
-
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li class="nav-item cafe-center">
@@ -68,7 +115,6 @@
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li><a href="#">Login</a></li>
-
                             <li><a href="#">Sign Up</a></li>
                         </ul>
                     </li>
@@ -78,98 +124,62 @@
         </div>
     </header>
 
-
     <main class="main">
-
-
-        <div class="menu-container-light-details " style="padding-top: 150px;">
-            <div class="row  justify-content-center mb-5">
-                <!-- First row for the two container-payment divs -->
+        <div class="menu-container-light-details" style="padding-top: 150px;">
+            <div class="row justify-content-center mb-5">
                 <div class="col-md-6">
                     <div class="row mb-2">
-                        <div class="col-sm-4">
-                            <div class="container-payment">
-                                #00001
-                            </div>
+                        <div class="col-sm-4 mb-3">
+                            <div class="container-payment">#00001</div>
                         </div>
                         <div class="col-sm-8">
-                            <div class="container-payment">
-                                Payment Method
-                            </div>
+                            <div class="container-payment">Payment Method</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4 p-2 mr-4">
-                            <p style="
-    font-weight: 800;
-    color: #ed8705;
-    margin-left: 30px;">
-                                Total
-                            </p>
+                            <p style="font-weight: 800; color: #ed8705; margin-left: 30px;">Total</p>
                         </div>
                         <div class="col-sm-8">
-                            <div class="container-payment">
-                                500.00
-                            </div>
+                            <div class="container-payment">500.00</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h3 style="
-                        font-weight: 800;
-                        color: #ed8705;
-                        font-size: 3rem;
-                 text-align: center;">“Thank you for Dining with us”</h3>
-                    <p style="
-                        font-weight: 800;
-                        color: #ed8705;
-                        font-size: .8rem;
-                 text-align: center;">Expect a waiting time of 5-10 minutes on your order</p>
+                    <h3 style="font-weight: 800; color: #ed8705; font-size: 3rem; text-align: center;">
+                        “Thank you for Dining with us”
+                    </h3>
+                    <p style="font-weight: 800; color: #ed8705; font-size: .8rem; text-align: center;">
+                        Expect a waiting time of 5-10 minutes on your order
+                    </p>
                 </div>
-
             </div>
-            <div class="row  text-center">
-                <div class="col-sm-6">
+            <div class="row text-center">
+                <div class="col-sm-6 mb-3">
                     <div class="container-otc">
-                        <h3 style="
-        font-weight: 800;
-        color: #ed8705;
-        margin-left: 30px;
-        margin-bottom: 40px;
-        font-size: 5rem;">Over the Counter</h3>
-                        <p style="font-size: 3rem">Payment over the cashier</p>
+                        <h3>
+                            Over the Counter
+                        </h3>
+                        <p>Payment over the cashier</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
-
-                    <h3 style="
-    font-weight: 800;
-    color: #ed8705;
-    margin-left: 30px;">Please Proceed to the
-                        counter to proceed with
-                        your order</h3>
-
+                    <h3 style="font-weight: 800; color: #ed8705; margin-left: 30px;">
+                        Please Proceed to the counter to proceed with your order
+                    </h3>
                 </div>
             </div>
         </div>
-
-
-
-        </div>
-
-
-
-
     </main>
+
     <footer id="footer" class="footer-product text-center">
-
         <h1>"brewing timeless moments"</h1>
-
     </footer>
 
     <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
 
     <!-- Preloader -->
     <div id="preloader"></div>
@@ -186,29 +196,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script>
-        document.querySelectorAll('.radio-options input[type="radio"]').forEach(radio => {
-            radio.addEventListener('change', function () {
 
-                document.querySelectorAll('.radio-options input[type="radio"]').forEach(input => {
-                    const beforeStyle = input.parentNode.parentNode.querySelector('label:before');
-                    if (beforeStyle) {
-                        beforeStyle.style.background = 'white';
-                        beforeStyle.style.border = '2px solid black';
-                    }
-                });
-
-
-                const checkedLabel = this.closest('label');
-                const checkedBefore = checkedLabel.querySelector('div:before');
-                if (checkedBefore) {
-                    checkedBefore.style.background = 'orange';
-                    checkedBefore.style.border = '2px solid orange';
-                }
-            });
-        });
-
-    </script>
 </body>
 
 </html>

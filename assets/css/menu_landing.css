@@ -211,6 +211,42 @@ font-size: 5.5rem;
   }
 
 }
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .menu-options {
+        flex-direction: column; /* Stack menu options */
+        gap: 15px;
+    }
+
+    .menu-option {
+        width: 200px; /* Reduce size for mobile */
+        height: 200px;
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    /* Adjusting title size for smaller screens */
+    .menu-title {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+}
+
+/* Tablet view (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-options {
+        justify-content: center;
+    }
+
+    .menu-option {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Adjust title for tablet view */
+    .menu-title {
+        font-size: 2.5rem;
+    }
+}
 
 
 

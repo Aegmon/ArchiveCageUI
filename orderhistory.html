@@ -131,83 +131,9 @@
                                         </div>
                                     </div>
 
-                                    <!-- Order 2 -->
-                                    <div class="col-md-4">
-                                        <div class="order-container">
-                                            <p># 00002</p>
-                                            <div class="text-right">
-                                                <p>QTY</p>
-                                            </div>
-                                            <div class="product-table mb-3">
-                                                <img src="assets/img/products/cold americano.png" alt="Card image cap"
-                                                    width="auto" height="60">
-                                                <p>Caramel Macchiato</p>
-                                                <p>1</p>
-                                            </div>
-                                            <div class="product-table mb-3">
-                                                <img src="assets/img/products/cold americano.png" alt="Card image cap"
-                                                    width="auto" height="60">
-                                                <p>Caramel Macchiato</p>
-                                                <p>1</p>
-                                            </div>
-                                            <div class="product-table mb-3">
-                                                <img src="assets/img/products/cold americano.png" alt="Card image cap"
-                                                    width="auto" height="60">
-                                                <p>Caramel Macchiato</p>
-                                                <p>1</p>
-                                            </div>
-                                            <div class="product-table mb-3">
-                                                <img src="assets/img/products/cold americano.png" alt="Card image cap"
-                                                    width="auto" height="60">
-                                                <p>Caramel Macchiato</p>
-                                                <p>1</p>
-                                            </div>
-                                            <div
-                                                style="display: flex; justify-content: space-between; align-items: center;">
-                                                <p class="text-center">Total</p>
-                                                <p class="table-container" style="width: 20%;">1000</p>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <!-- Order 3 -->
-                                    <div class="col-md-4">
-                                        <div class="order-container">
-                                            <p># 00003</p>
-                                            <div class="text-right">
-                                                <p>QTY</p>
-                                            </div>
-                                            <div class="product-table mb-3">
-                                                <img src="assets/img/products/cold americano.png" alt="Card image cap"
-                                                    width="auto" height="60">
-                                                <p>Caramel Macchiato</p>
-                                                <p>1</p>
-                                            </div>
-                                            <div class="product-table mb-3">
-                                                <img src="assets/img/products/cold americano.png" alt="Card image cap"
-                                                    width="auto" height="60">
-                                                <p>Caramel Macchiato</p>
-                                                <p>1</p>
-                                            </div>
-                                            <div class="product-table mb-3">
-                                                <img src="assets/img/products/cold americano.png" alt="Card image cap"
-                                                    width="auto" height="60">
-                                                <p>Caramel Macchiato</p>
-                                                <p>1</p>
-                                            </div>
-                                            <div class="product-table mb-3">
-                                                <img src="assets/img/products/cold americano.png" alt="Card image cap"
-                                                    width="auto" height="60">
-                                                <p>Caramel Macchiato</p>
-                                                <p>1</p>
-                                            </div>
-                                            <div
-                                                style="display: flex; justify-content: space-between; align-items: center;">
-                                                <p class="text-center">Total</p>
-                                                <p class="table-container" style="width: 20%;">750</p>
-                                            </div>
-                                        </div>
-                                    </div>
+
+
                                 </div>
                             </div>
 
@@ -383,29 +309,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script>
-        document.querySelectorAll('.radio-options input[type="radio"]').forEach(radio => {
-            radio.addEventListener('change', function () {
 
-                document.querySelectorAll('.radio-options input[type="radio"]').forEach(input => {
-                    const beforeStyle = input.parentNode.parentNode.querySelector('label:before');
-                    if (beforeStyle) {
-                        beforeStyle.style.background = 'white';
-                        beforeStyle.style.border = '2px solid black';
-                    }
-                });
-
-
-                const checkedLabel = this.closest('label');
-                const checkedBefore = checkedLabel.querySelector('div:before');
-                if (checkedBefore) {
-                    checkedBefore.style.background = 'orange';
-                    checkedBefore.style.border = '2px solid orange';
-                }
-            });
-        });
-
-    </script>
 </body>
 
 </html>

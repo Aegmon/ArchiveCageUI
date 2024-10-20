@@ -80,8 +80,10 @@
     <main class="main">
 
 
-        <div class="menu-container-light">
-            <nav class="category-menu-products d-flex flex-wrap justify-content-center mb-3">
+        <div class="menu-container-light" style="margin-bottom:80px">
+
+
+            <nav class="category-menu-products d-none d-md-flex flex-wrap justify-content-center mb-3">
                 <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('signature')">Signature
                     Coffee</button>
                 <button class="custom-category-btn btn mx-2 my-1"
@@ -89,13 +91,52 @@
                 <button class="custom-category-btn btn mx-2 my-1"
                     onclick="showProduct('regreshers')">Refreshers</button>
                 <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('tea')">Tea</button>
-                <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('pastry')">Pastiers</button>
+                <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('pastry')">Pastries</button>
                 <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('pasta')">Pasta</button>
                 <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('rice')">Rice Meal</button>
                 <button class="custom-category-btn btn mx-2 my-1"
                     onclick="showProduct('appetizers')">Appetizers</button>
                 <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('burger')">Burger</button>
             </nav>
+
+            <div id="categoryCarousel" class="carousel slide category-menu-products mt-4" data-bs-ride="carousel"
+                style="margin-bottom:40px">
+                <div class="carousel-inner">
+                    <!-- First Item -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('signature')">
+                                Signature Coffee
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Second Item -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <button class="custom-category-btn btn mx-2 my-1"
+                                onclick="showProduct('non-coffee')">Non-Coffee</button>
+                        </div>
+                    </div>
+                    <!-- Third Item -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('refreshers')">
+                                Refreshers
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Fourth Item -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <button class="custom-category-btn btn mx-2 my-1" onclick="showProduct('tea')">Tea</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Regular menu for larger screens -->
+
 
 
 

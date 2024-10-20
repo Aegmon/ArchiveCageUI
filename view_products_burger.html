@@ -33,7 +33,37 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        @media (max-width: 767.98px) {
 
+            /* Mobile view */
+            .page-header {
+                text-align: center;
+                /* Center-align headers in mobile view */
+            }
+
+            .product-description {
+                text-align: center;
+                /* Center-align product description */
+            }
+
+            .extras-section {
+                text-align: center;
+                /* Center-align extras section */
+            }
+
+            .btn-group-wrapper {
+                text-align: center;
+                /* Center-align button group */
+            }
+
+            .product-image {
+                margin-top: 30px;
+                max-width: 60%;
+                /* Make sure the image is responsive */
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+        }
     </style>
 </head>
 
@@ -86,17 +116,17 @@
 
             <div class="row">
                 <!-- Left Section: Product Display -->
-
-                <div class="col-lg-5 col-md-6 col-sm-12 mb-4">
-                    <h1 class="page-header text-center" style="color:#ed8705;font-weight: 600;">Classic Burger</h1>
-                    <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-12 mb-4 text-center">
+                    <h1 class="page-header" style="color:#ed8705;font-weight: 600;">Classic Burger</h1>
+                    <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                            <img class="img-fluid" src="assets/img/products/cold americano.png" alt="Card image cap">
+                            <img class="img-fluid product-image" src="assets/img/products/cold americano.png"
+                                alt="Card image cap">
                         </div>
-                        <div class="col-lg-8 col-md-6 col-sm-12 mb-4" style="text-align: right;">
+                        <div class="col-lg-8 col-md-6 col-sm-12 mb-4">
                             <h1 class="page-header">₱ 150.00</h1>
                             <div class="btn-group-wrapper">
-                                <div class="btn-group">
+                                <div class="btn-group col-sm-12">
                                     <button class="btn btn-dark">H</button>
                                     <button class="btn btn-warning">C</button>
                                 </div>
@@ -104,14 +134,15 @@
 
                             <br>
                             <button class="btn btn-warning mt-3">Add to cart</button>
-
                         </div>
                     </div>
                     <div class="row">
-                        <p class="product-description mt-3" style="text-align: right;">
-                            Add a little bit of body text Add a little bit of body textAdd a little bit of body textAdd
-                            a little bit of body textAdd
-                            a little bit of body textAdd a little bit of body textAdd a little bit of body text
+                        <p class="product-description mt-3" style="text-align: center;">
+                            Add a little bit of body text Add a little bit of body text Add a little bit of body text
+                            Add
+                            a little bit of body text Add a little bit of body text Add a little bit of body text Add a
+                            little bit
+                            of body text
                         </p>
                     </div>
                 </div>
@@ -120,11 +151,9 @@
                 <div class="col-lg-2 col-md-6 col-sm-12 mb-4 product-divider d-none d-md-block"></div>
 
                 <!-- Right Section: Extras -->
-                <div class="col-lg-5 col-md-5 col-sm-12 mb-4">
-                    <h1 class="page-header text-center" style="color:#ed8705;font-weight: 600;">Extras</h1>
+                <div class="col-lg-5 col-md-5 col-sm-12 mb-4 text-center">
+                    <h1 class="page-header" style="color:#ed8705;font-weight: 600;">Extras</h1>
                     <div class="extras-section">
-
-
                         <div class="radio-options">
                             <label>
                                 <div class="extra-container">
@@ -134,20 +163,17 @@
                             </label>
                             <label>
                                 <div class="extra-container">
-                                    <input type="radio" name="syrup" value="roasted_almond">
+                                    <input type="radio" name="syrup" value="hot_sauce">
                                     Hot Sauce
                                 </div>
-                            </label><label>
+                            </label>
+                            <label>
                                 <div class="extra-container">
-                                    <input type="radio" name="syrup" value="roasted_almond">
+                                    <input type="radio" name="syrup" value="ketchup">
                                     Ketchup
                                 </div>
                             </label>
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>

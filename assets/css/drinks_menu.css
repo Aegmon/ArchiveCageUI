@@ -346,7 +346,15 @@ background-color: white !important;
     margin-right: 0;            
 }
 
+@media (max-width: 767.98px) { /* Mobile view */
+    .btn-group-wrapper {
+        justify-content: center; /* Center-align buttons in mobile view */
+    }
 
+    .btn-group {
+        width: 40%; /* Allow the button group to fit content */
+    }
+}
 
 .product-description {
     font-size: 1.3rem;
@@ -935,7 +943,7 @@ font-weight: 700;
     border-radius: 50px;
     border: solid 1px #3f2314;
     padding: 10px 20px;
-    margin: 20px;
+        margin: 20px 0;
     color: #ed8705;
     font-weight: 600;
     font-size: 1.5em;
@@ -955,7 +963,7 @@ font-weight: 700;
     border-radius: 50px;
     border: solid 1px #3f2314;
     padding: 10px 20px;
-    margin: 20px;
+      margin: 20px 0;
     color: white;
     font-weight: 600;
     font-size: 1.5em;
@@ -1194,5 +1202,119 @@ font-weight: 700;
 
     .total-price {
         text-align: center;
+    }
+}
+/* Global media query for mobile and tablet devices */
+@media (max-width: 768px) {
+    .menu-container, .login-container {
+        padding: 40px; /* Reduce padding for smaller screens */
+    }
+
+    .menu-container-light, .menu-container-light-details {
+             padding : 60px 40px
+             
+    }
+
+    .product-details h2, .customization-options h3 {
+        font-size: 1.5rem; /* Adjusted to be more readable on smaller screens */
+    }
+
+    /* Buttons on mobile view should be full-width */
+    .category-menu button, .category-menu a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .menu-items, .product-details {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Make containers adapt to small screen sizes */
+    .container-mop, .container-otc {
+        width: 100%;
+        padding: 15px;
+        height: auto; /* Set auto height for mobile */
+    }
+
+    /* Dine-in buttons adjustments */
+    .btn-dinein, .btn-dineindark {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 15px;
+    }
+
+    /* Product table adjustments */
+   .product-table {
+    display: flex;
+    flex-direction: row; /* Keep items in a row */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.8em; /* Reduce font size for the entire table */
+}
+
+.product-table p, /* Targeting paragraph elements */
+.product-table img { /* Targeting image elements */
+    font-size: inherit; /* Use the inherited font size from the parent */
+}
+
+/* If you want to adjust the font size of specific elements separately */
+.product-table .product-name {
+    font-size: 0.9em; /* Example of slightly larger font for product names */
+}
+
+.product-table .product-price {
+    font-size: 0.8em; /* Specific size for product prices */
+}
+
+.product-table .product-qty {
+    font-size: 0.8em; /* Specific size for quantities */
+}
+
+}
+
+/* Mobile view (smaller than 480px) */
+@media (max-width: 480px) {
+    .category-box {
+        font-size: 1.2em; /* Reduced font size */
+        padding: 20px; /* Adjust padding */
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Adjust text sizes for product details */
+    .product-details h2 {
+        font-size: 20px;
+    }
+
+    /* Reduce button sizes */
+    .custom-btn {
+        font-size: 1.2em;
+    }
+    
+    /* Center-align total price */
+    .total-price {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+/* Hide carousel on screens larger than mobile */
+@media (min-width: 768px) {
+    #categoryCarousel {
+        display: none;
+    }
+}
+
+/* Show carousel on mobile only */
+@media (max-width: 767px) {
+    #categoryCarousel {
+        display: block;
+    }
+
+    /* Hide the regular menu on mobile */
+    .category-menu-products.d-none.d-md-flex {
+        display: none !important;
     }
 }

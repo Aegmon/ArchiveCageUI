@@ -78,31 +78,30 @@
 
 
     <main class="main">
-
-
-        <div class="menu-container-light-details" style="padding-top: 150px;">
+        <div class="menu-container-light-details" style="padding-top: 130px;">
+            <!-- First row for the two container-payment divs -->
             <div class="row justify-content-center mb-5">
-                <!-- First row for the two container-payment divs -->
-                <div class="col-3">
+                <div class="col-12 col-md-3 mb-3 mb-md-0">
                     <div class="container-payment">
                         #00001
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <div class="container-payment">
                         Payment
                     </div>
                 </div>
-
             </div>
+
+            <!-- Second row for the payment options -->
             <div class="row text-center" id="payment-row">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
                     <div class="container-mop" id="online" onclick="swapPositionsAndRedirect('online.html')">
                         <h3>Online Payment</h3>
                         <p>Gcash Payment</p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                     <div class="container-mop" id="otc" onclick="swapPositionsAndRedirect('otc.html')">
                         <h3>Over the Counter</h3>
                         <p>Payment over the cashier</p>
@@ -111,6 +110,7 @@
             </div>
         </div>
     </main>
+
     <footer id="footer" class="footer-product text-center">
         <h1>"brewing timeless moments"</h1>
     </footer>
