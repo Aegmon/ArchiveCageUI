@@ -227,4 +227,13 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+
+  document.querySelectorAll('.navmenu a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelectorAll('.navmenu a').forEach(item => item.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
 })();

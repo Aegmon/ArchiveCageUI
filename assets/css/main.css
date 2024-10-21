@@ -289,6 +289,28 @@ h6 {
 .navmenu .dropdown button {
   margin-left: 15px;
 }
+.navmenu a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 5px;
+}
+
+.navmenu a:hover::before,
+.navmenu a.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -5px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.navmenu a.active::before {
+  display: block;
+}
 
 
 /* For responsiveness */
@@ -1826,6 +1848,7 @@ section,
     max-width: 80%;
     margin: 0 auto 30px auto;
   }
+  
 }
 
 @media (max-width: 420px) {
@@ -2334,5 +2357,53 @@ section,
   background-repeat: no-repeat;
   width: 100%; 
   height: auto; 
+}
+
+.d-md-none {
+  display: none; 
+}
+
+
+@media (max-width: 1199px) { 
+  .d-md-none { 
+    display: block; 
+  } 
+
+  .cafe-name { 
+    font-size: 1.5em; 
+  } 
+
+  .nav-item.d-none.d-md-block { 
+    display: none; 
+  } 
+}
+
+/* Additional media queries for tablets */
+@media (max-width: 1024px) {
+  .d-md-none { 
+    display: block; 
+  } 
+
+  .cafe-name { 
+    font-size: 1.5em; 
+  } 
+
+  .nav-item.d-none.d-md-block { 
+    display: none; 
+  } 
+}
+
+@media (max-width: 1366px) { 
+  .d-md-none { 
+    display: block; 
+  } 
+
+  .cafe-name { 
+    font-size: 1.5em; 
+  } 
+
+  .nav-item.d-none.d-md-block { 
+    display: none; 
+  } 
 }
 
