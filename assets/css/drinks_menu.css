@@ -1318,3 +1318,118 @@ font-weight: 700;
         display: none !important;
     }
 }
+.total-text {
+    font-weight: 800;
+    color: #ed8705;
+    margin-left: 30px;
+    font-size: 2.5rem;
+}
+
+.thank-you-text {
+    font-weight: 800;
+    color: #ed8705;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.waiting-time-text {
+    font-weight: 800;
+    color: #ed8705;
+    font-size: 1rem;
+    text-align: center;
+}
+.waiting-time-white {
+    font-weight: 800;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+.otc-header {
+    font-size: 2.5rem;
+}
+.p-text{
+      color: #ed8705;
+    font-size: 1rem;
+}
+
+.proceed-text {
+    font-weight: 800;
+    color: #ed8705;
+    margin-left: 30px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .total-text {
+        font-size: 2rem;
+    }
+    
+    .thank-you-text {
+        font-size: 2.5rem;
+    }
+
+    .waiting-time-text {
+        font-size: 0.9rem;
+    }
+
+    .otc-header {
+        font-size: 2rem;
+    }
+
+    .proceed-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .total-text {
+        font-size: 1.5rem;
+    }
+
+    .thank-you-text {
+        font-size: 2rem;
+    }
+
+    .waiting-time-text {
+        font-size: 0.8rem;
+    }
+
+    .otc-header {
+        font-size: 1.5rem;
+    }
+
+    .proceed-text {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .login-input {
+        font-size: 0.9rem;
+        padding: 14px 18px;
+    }
+
+    .login-input::placeholder {
+        font-size: 1.8em;
+    }
+
+    .btn-login {
+        font-size: 1.8em;
+        width: 60%;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-input {
+        font-size: 0.8rem;
+        padding: 12px 16px;
+    }
+
+    .login-input::placeholder {
+        font-size: 1.6em;
+    }
+
+    .btn-login {
+        font-size: 1.5em;
+        width: 80%;
+    }
+}

@@ -957,34 +957,35 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
 .hero {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 60px 0;
+  padding: 5px 0 60px 0;
   display: flex;
   align-items: center;
-    background-image: url('../img/bean\ 2.png'); 
+  justify-content: center; /* Center content horizontally */
+  background-image: url('../img/bean 2.png'); 
   background-size: cover; 
   background-position: center top;
   background-repeat: no-repeat;
-  width: 100%; 
-  height: auto; 
+  height: auto;
+  text-align: center; /* Center text on smaller screens */
 }
-.hero-menu {
-  width: 100%;
-  min-height: 94vh;
 
-}
 .hero h1 {
   margin: 0;
   font-size: 80px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.2;
+  color: black;
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(0, 0, 0, 0.7);
   margin: 5px 0 30px 0;
   font-size: 22px;
   line-height: 1.3;
@@ -993,134 +994,132 @@ section,
 
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: #242424;;
+  background: #242424;
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 25px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 10px 28px 12px 28px;
+  padding: 10px 28px;
   border-radius: 50px;
   transition: 0.5s;
 }
 
 .hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background: rgba(36, 36, 36, 0.85);
 }
 
-.hero .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: var(--default-color);
-  font-weight: 600;
-}
-
-.hero .btn-watch-video i {
-  color: var(--contrast-color);
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
-}
-
-.hero .btn-watch-video:hover {
-  color: var(--accent-color);
-}
-
-.hero .btn-watch-video:hover i {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
-
-.hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
 .hero-img {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .cold-latte {
-    position: relative;
+     position: relative;
     z-index: 2;
-    width: 82%;
-    max-width: 500px; /* Limit max size for larger screens */
+    width: 125%;
+    max-width: 200%;
     height: auto;
+    /* padding: 15px 22px 61px; */
+    padding-bottom: 51px;
 }
 
 .hot-latte {
-    position: absolute;
-    top: 61px;
-    left: -148px;
-    z-index: 1;
-    width: 71%;
-    transform: rotate(341deg);
+  position: absolute;
+  top: 60px;
+  left: -140px;
+  z-index: 1;
+  width: 70%;
+  transform: rotate(340deg);
 }
 
 .splash {
-    position: absolute;
-    top: -143px;
-    left: -181px;
-    z-index: -1;
-    width: 127%;
-    max-width: 200%;
+  position: absolute;
+  top: -140px;
+  left: -180px;
+  z-index: -1;
+  width: 120%;
+  max-width: 200%;
 }
 
+/* Responsive Design for Tablets */
 @media (max-width: 768px) {
-    .cold-latte {
-        width: 90%;
-        max-width: 400px;
-    }
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+    flex-direction: column; /* Stack content vertically */
+  }
 
-    .hot-latte {
-        top: 50px;
-        left: -100px;
-        width: 75%;
-        transform: rotate(340deg);
-    }
-
-    .splash {
-        top: -100px;
-        left: -150px;
-        width: 140%;
-    }
-}
-
-@media (max-width: 480px) {
-    .cold-latte {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .hot-latte {
-        top: 40px;
-        left: -80px;
-        width: 80%;
-        transform: rotate(340deg);
-    }
-
-    .splash {
-        top: -80px;
-        left: -120px;
-        width: 150%;
-    }
-}
-
-@media (max-width: 640px) {
   .hero h1 {
-    font-size: 3.2rem;
-    line-height: 36px;
+    font-size: 50px;
+    line-height: 1.1;
   }
 
   .hero p {
     font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
   }
 
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 13px;
+  .hero .btn-get-started {
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+
+  .cold-latte {
+    width: 70%;
+    max-width: 350px;
+  }
+
+  .hot-latte {
+    top: 50px;
+    left: -100px;
+    width: 65%;
+  }
+
+  .splash {
+    top: -100px;
+    left: -150px;
+    width: 140%;
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+  .hero {
+        padding-top: 0px;
+        text-align: center;
+        flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .btn-get-started {
+          font-size: 26px;
+        padding: 6px 39px;
+  }
+
+  .cold-latte {
+          width: 94%;
+        max-width: 200%;
+        padding-bottom: 0px;
+  }
+
+  .hot-latte {
+    top: 40px;
+    left: -80px;
+    width: 60%;
+  }
+
+  .splash {
+    top: -80px;
+    left: -120px;
+    width: 150%;
   }
 }
 
@@ -1128,7 +1127,6 @@ section,
   0% {
     transform: translateY(10px);
   }
-
   100% {
     transform: translateY(-10px);
   }
