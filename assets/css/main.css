@@ -2357,30 +2357,25 @@ section,
   height: auto; 
 }
 
-.d-md-none {
-  display: none; 
+
+@media (max-width: 1199px) {
+  .d-md-none {
+    display: block !important; /* Use !important to ensure it overrides Bootstrap */
+  }
+  .cafe-name {
+    font-size: 1.5em;
+  }
+  .nav-item.d-none.d-md-block {
+    display: none;
+  }
+  .bean-image-right {
+    display: none;
+  }
+  .bean-image-left {
+    display: none;
+  }
 }
 
-
-@media (max-width: 1199px) { 
-  .d-md-none { 
-    display: block; 
-  } 
-
-  .cafe-name { 
-    font-size: 1.5em; 
-  } 
-
-  .nav-item.d-none.d-md-block { 
-    display: none; 
-  } 
-  .bean-image-right{
-    display: none; 
-}
-.bean-image-left{
-  display: none; 
-}
-}
 
 /* Additional media queries for tablets */
 @media (max-width: 1024px) {
