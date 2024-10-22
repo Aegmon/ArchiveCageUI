@@ -2374,6 +2374,12 @@ section,
   .nav-item.d-none.d-md-block { 
     display: none; 
   } 
+  .bean-image-right{
+    display: none; 
+}
+.bean-image-left{
+  display: none; 
+}
 }
 
 /* Additional media queries for tablets */
