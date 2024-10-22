@@ -46,7 +46,7 @@ background-color: white !important;
 .menu-container-light-details{
 background-color: white !important;
  width: 100%;
- min-height: 94vh;
+ min-height: 96vh;
   padding: 95px;
   width: 100%; 
   height: auto; 
@@ -943,10 +943,10 @@ font-weight: 700;
     border-radius: 50px;
     border: solid 1px #3f2314;
     padding: 10px 20px;
-        margin: 20px 0;
+    margin: 20px 0;
     color: #ed8705;
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.5em; /* Default font size */
     transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
@@ -956,6 +956,32 @@ font-weight: 700;
     color: white;
     border: solid 1px #ed8705;
 }
+
+/* Responsive font sizes */
+@media (max-width: 1200px) {
+    .btn-dashboard {
+        font-size: 1.3em; /* Medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .btn-dashboard {
+        font-size: 1.1em; /* Smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-dashboard {
+        font-size: 1em; /* Mobile screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-dashboard {
+        font-size: 0.9em; /* Extra small screens */
+    }
+}
+
 
 .profile-view-input{
      width: 100%;
