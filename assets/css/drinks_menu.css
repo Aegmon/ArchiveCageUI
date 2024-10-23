@@ -1,7 +1,7 @@
 /* Body & Menu */
 .menu-container {
 
- min-height: 94vh;
+    min-height: 95.5vh;
 
   padding: 120px;
     background-image: url('../img/background\ management.JPG'); 
@@ -1459,3 +1459,83 @@ font-weight: 700;
         width: 80%;
     }
 }
+
+       table.dataTable {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Table headers */
+        table.dataTable thead th {
+            background-color: #c1865b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Table rows */
+        table.dataTable tbody td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+             background-color: #d9a26e;
+        }
+
+        /* Hover effect on rows */
+        table.dataTable tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Styling pagination buttons */
+          .dataTables_wrapper .dataTables_paginate .paginate_button {
+            padding: 6px 12px;
+            background-color: #c1865b;
+            color: white;  /* Text color white */
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            background-color: #2b2151;
+        }
+
+        /* Search box and entries dropdown styling */
+        .dataTables_filter label,  /* Search filter text */
+        .dataTables_length label { /* Show entries text */
+            color: white; /* White text */
+        }
+
+        .dataTables_filter input {
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            color: white;  /* Text inside the search input */
+            background-color: #c1865b;  /* Background for input */
+        }
+
+        .dataTables_length select {
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            color: white;  /* Text inside dropdown */
+            background-color: #c1865b;  /* Background for dropdown */
+        }
+
+        /* Info section styling (e.g., Showing X to Y of Z entries) */
+        .dataTables_info {
+            color: white; 
+        }
+        .table-brown{
+               
+    gap: 10px;
+    width: 100%;
+    background-color: #1f0d01b6;
+    padding: 20px;
+    border-radius: 10px;
+        margin: 20px;
+        color: white;
+        }
