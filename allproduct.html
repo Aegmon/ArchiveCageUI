@@ -152,7 +152,11 @@
                                 <input type="text" class="form-control w-100 custom-input"
                                     placeholder="Enter Product Name" value="Americano" readonly />
                             </div>
-
+                            <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
+                                <label class="me-2 w-25 w-md-100">Upload Photo</label>
+                                <input type="file" class="form-control w-100 custom-input" id="product-photo"
+                                    accept="image/*" onchange="previewPhoto()">
+                            </div>
                             <!-- Category Dropdown -->
                             <div class="form-group d-flex align-items-center mb-3 flex-md-row flex-column">
                                 <label class="me-2 w-25 w-md-100">Price</label>
